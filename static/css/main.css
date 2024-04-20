@@ -311,7 +311,8 @@ main blockquote {
 
 .home_posts {
   list-style: none;
-  background: var(--bg-color);
+  background: var(--bg-color-light);
+  color: var(--text-color-light);
 }
 
 .itsme {
