@@ -4,7 +4,7 @@
   font-family: 'Source Sans 3';
   font-style: normal;
   font-weight: 400;
-  src: url('/assets/fonts/source-sans-3-v15-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('/fonts/source-sans-3-v15-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* source-sans-3-italic - latin */
@@ -13,7 +13,7 @@
   font-family: 'Source Sans 3';
   font-style: italic;
   font-weight: 400;
-  src: url('/assets/fonts/source-sans-3-v15-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('/fonts/source-sans-3-v15-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* source-sans-3-600 - latin */
@@ -22,7 +22,7 @@
   font-family: 'Source Sans 3';
   font-style: normal;
   font-weight: 600;
-  src: url('/assets/fonts/source-sans-3-v15-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('/fonts/source-sans-3-v15-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* source-sans-3-600italic - latin */
@@ -31,16 +31,16 @@
   font-family: 'Source Sans 3';
   font-style: italic;
   font-weight: 600;
-  src: url('/assets/fonts/source-sans-3-v15-latin-600italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('/fonts/source-sans-3-v15-latin-600italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 @font-face {
   font-family: "Cartridge";
   font-weight: normal;
   font-style: normal;
-  src: url("/assets/fonts/Cartridge-Regular.otf") format("opentype"),
-    url("/assets/fonts/Cartridge-Regular.woff2") format("woff2"),
-    url("/assets/fonts/Cartridge-Regular.woff") format("woff");
+  src: url("/fonts/Cartridge-Regular.otf") format("opentype"),
+    url("/fonts/Cartridge-Regular.woff2") format("woff2"),
+    url("/fonts/Cartridge-Regular.woff") format("woff");
   font-display: swap;
 }
 
@@ -48,9 +48,9 @@
   font-family: "Cartridge";
   font-weight: bold;
   font-style: normal;
-  src: url("/assets/fonts/Cartridge-Bold.otf") format("opentype"),
-    url("/assets/fonts/Cartridge-Bold.woff2") format("woff2"),
-    url("/assets/fonts/Cartridge-Bold.woff") format("woff");
+  src: url("/fonts/Cartridge-Bold.otf") format("opentype"),
+    url("/fonts/Cartridge-Bold.woff2") format("woff2"),
+    url("/fonts/Cartridge-Bold.woff") format("woff");
   font-display: swap;
 }
 
@@ -58,9 +58,9 @@
   font-family: "iA Writer Mono";
   font-weight: normal;
   font-style: normal;
-  src: url("/assets/fonts/iAWriterMonoS-Regular.eot") format("embedded-opentype"),
-    url("/assets/fonts/iAWriterMonoS-Regular.woff2") format("woff2"),
-    url("/assets/fonts/iAWriterMonoS-Regular.woff") format("woff");
+  src: url("/fonts/iAWriterMonoS-Regular.eot") format("embedded-opentype"),
+    url("/fonts/iAWriterMonoS-Regular.woff2") format("woff2"),
+    url("/fonts/iAWriterMonoS-Regular.woff") format("woff");
   font-display: swap;
 }
 
@@ -68,9 +68,9 @@
   font-family: "iA Writer Mono";
   font-weight: normal;
   font-style: italic;
-  src: url("/assets/fonts/iAWriterMonoS-Italic.eot") format("embedded-opentype"),
-    url("/assets/fonts/iAWriterMonoS-Italic.woff2") format("woff2"),
-    url("/assets/fonts/iAWriterMonoS-Italic.woff") format("woff");
+  src: url("/fonts/iAWriterMonoS-Italic.eot") format("embedded-opentype"),
+    url("/fonts/iAWriterMonoS-Italic.woff2") format("woff2"),
+    url("/fonts/iAWriterMonoS-Italic.woff") format("woff");
   font-display: swap;
 }
 
@@ -78,9 +78,9 @@
   font-family: "iA Writer Mono";
   font-weight: bold;
   font-style: normal;
-  src: url("/assets/fonts/iAWriterMonoS-Bold.eot") format("embedded-opentype"),
-    url("/assets/fonts/iAWriterMonoS-Bold.woff2") format("woff2"),
-    url("/assets/fonts/iAWriterMonoS-Bold.woff") format("woff");
+  src: url("/fonts/iAWriterMonoS-Bold.eot") format("embedded-opentype"),
+    url("/fonts/iAWriterMonoS-Bold.woff2") format("woff2"),
+    url("/fonts/iAWriterMonoS-Bold.woff") format("woff");
   font-display: swap;
 }
 
@@ -88,9 +88,9 @@
   font-family: "iA Writer Mono";
   font-weight: bold;
   font-style: italic;
-  src: url("/assets/fonts/iAWriterMonoS-BoldItalic.eot") format("embedded-opentype"),
-    url("/assets/fonts/iAWriterMonoS-BoldItalic.woff2") format("woff2"),
-    url("/assets/fonts/iAWriterMonoS-BoldItalic.woff") format("woff");
+  src: url("/fonts/iAWriterMonoS-BoldItalic.eot") format("embedded-opentype"),
+    url("/fonts/iAWriterMonoS-BoldItalic.woff2") format("woff2"),
+    url("/fonts/iAWriterMonoS-BoldItalic.woff") format("woff");
   font-display: swap;
 }
 
@@ -534,17 +534,9 @@ time {
   main blockquote {
     border-left: 5px solid var(--link-color-dark);
   }
-  .wrapper .inner, .home_posts, .top-head .inner {
+  .wrapper .inner, .home_columns .home_posts, .top-head .inner {
     background-color: var(--bg-dark);
     color: var(--text-color-dark);
-  }
-
-  .home_posts {
-    color: var(--text-color-dark);
-  }
-
-  .home_columns .post-list {
-    background-color: var(--bg-dark);
   }
 
   .home_columns .home_blogroll {
