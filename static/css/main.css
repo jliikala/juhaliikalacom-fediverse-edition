@@ -98,7 +98,7 @@
   --bg-light: #fff;
   --bg-light-opaq: #ffffffd1;
   --bg-dark: #060C12;
-  --bg-dark-opaq: #060C12d1;
+  --bg-dark-opaq: #060c12e8;
   --text-color-light: #111;
   --text-color-dark: rgba(255, 255, 255, 0.80);
   --bg-color: #060C12;
@@ -371,9 +371,14 @@ main blockquote {
   border: 7px solid var(--bg-color);
   background: var(--bg-color);
   position: absolute;
-	top: -50px;
+	top: 300px;
   background-color: var(--bg-color);
 	padding: 5px;
+}
+
+.home_posts {
+  list-style: none;
+  background: var(--bg-color);
 }
 
 .itsme {
@@ -534,17 +539,19 @@ time {
     color: var(--text-color-dark);
   }
 
-  .home_posts {
-    list-style: none;
-  }
-
   .home_columns .post-list {
     background-color: var(--bg-dark);
   }
 
   .home_columns .home_blogroll {
     background-color: var(--bg-dark-opaq);
+    color: var(--text-color-dark);
   }
+
+  .home_blogroll a {
+    color: var(--text-color-dark);
+  }
+
   .page-header img {
     border-radius: 100%;
     width: 105px;
