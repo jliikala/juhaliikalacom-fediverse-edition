@@ -527,10 +527,11 @@ time {
   flex-direction: column;
   align-items: start;
   }
+  .home_columns { flex-direction: column;
+  align-items: start; }
   .profile_photo { width: 60px; height: 60px; }
-  .home_blogroll { display: none; }
-  .home_posts { flex: auto; width: 100%; padding-left: 1rem;
-	padding-right: 1rem;}
+  .home_blogroll { display: none; padding: 0;}
+  .home_posts { flex: auto; width: 100%; padding: 0;}
 }
 
 @media (max-width: 520px) {
