@@ -492,6 +492,7 @@ time {
 @media (max-width: 820px) {
   body {
     background: none;
+    bacground-color: var(--bg-dark);
   }
   .container {
     flex-direction: column;
@@ -527,8 +528,11 @@ time {
 }
 .title-fediverse-handle {
   flex-direction: column;
+  justify-content: start;
   }
   .profile_photo { width: 60px; height: 60px; }
+  .home_blogroll { display: none; }
+  .home_posts { width: 100%; }
 }
 
 @media (max-width: 520px) {
