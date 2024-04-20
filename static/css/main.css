@@ -329,10 +329,13 @@ main blockquote {
 
 .home_columns .post-list {
   background-color: var(--bg-light);
+  padding: 5rem;
 }
 
 .home_columns .home_blogroll {
   background-color: var(--bg-light-opaq);
+  align-self: flex-start;
+  padding: 2rem 1rem;
 }
 
 .site-footer {
