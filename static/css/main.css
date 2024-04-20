@@ -267,6 +267,8 @@ main blockquote {
   align-self: flex-start;
 }
 
+.profile_photo { width: 100px; height: 100px; }
+
 .cover {
   flex: 1;
   overflow: hidden;
@@ -520,6 +522,13 @@ time {
 .home_posts {
   padding: 1rem;
 }
+.header-cover {
+  height: 200px;
+}
+.title-fediverse-handle {
+  flex-direction: row;
+  }
+  .profile_photo { width: 60px; height: 60px; }
 }
 
 @media (max-width: 520px) {
