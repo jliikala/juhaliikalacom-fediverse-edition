@@ -1,0 +1,488 @@
+/* source-sans-3-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Source Sans 3';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/source-sans-3-v15-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* source-sans-3-italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Source Sans 3';
+  font-style: italic;
+  font-weight: 400;
+  src: url('/assets/fonts/source-sans-3-v15-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* source-sans-3-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Source Sans 3';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/assets/fonts/source-sans-3-v15-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* source-sans-3-600italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Source Sans 3';
+  font-style: italic;
+  font-weight: 600;
+  src: url('/assets/fonts/source-sans-3-v15-latin-600italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+@font-face {
+  font-family: "Cartridge";
+  font-weight: normal;
+  font-style: normal;
+  src: url("/assets/fonts/Cartridge-Regular.otf") format("opentype"),
+    url("/assets/fonts/Cartridge-Regular.woff2") format("woff2"),
+    url("/assets/fonts/Cartridge-Regular.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cartridge";
+  font-weight: bold;
+  font-style: normal;
+  src: url("/assets/fonts/Cartridge-Bold.otf") format("opentype"),
+    url("/assets/fonts/Cartridge-Bold.woff2") format("woff2"),
+    url("/assets/fonts/Cartridge-Bold.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "iA Writer Mono";
+  font-weight: normal;
+  font-style: normal;
+  src: url("/assets/fonts/iAWriterMonoS-Regular.eot") format("embedded-opentype"),
+    url("/assets/fonts/iAWriterMonoS-Regular.woff2") format("woff2"),
+    url("/assets/fonts/iAWriterMonoS-Regular.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "iA Writer Mono";
+  font-weight: normal;
+  font-style: italic;
+  src: url("/assets/fonts/iAWriterMonoS-Italic.eot") format("embedded-opentype"),
+    url("/assets/fonts/iAWriterMonoS-Italic.woff2") format("woff2"),
+    url("/assets/fonts/iAWriterMonoS-Italic.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "iA Writer Mono";
+  font-weight: bold;
+  font-style: normal;
+  src: url("/assets/fonts/iAWriterMonoS-Bold.eot") format("embedded-opentype"),
+    url("/assets/fonts/iAWriterMonoS-Bold.woff2") format("woff2"),
+    url("/assets/fonts/iAWriterMonoS-Bold.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "iA Writer Mono";
+  font-weight: bold;
+  font-style: italic;
+  src: url("/assets/fonts/iAWriterMonoS-BoldItalic.eot") format("embedded-opentype"),
+    url("/assets/fonts/iAWriterMonoS-BoldItalic.woff2") format("woff2"),
+    url("/assets/fonts/iAWriterMonoS-BoldItalic.woff") format("woff");
+  font-display: swap;
+}
+
+:root {
+  --bg-light: #fff;
+  --bg-dark: #060C12;
+  --text-color-light: #111;
+  --text-color-dark: rgba(255, 255, 255, 0.80);
+  --bg-color: #060C12;
+  --bg-color-light: #F7F7F7;
+  --text-color: rgba(255, 255, 255, 0.80);
+  --text-color-light: #111;
+  --title-color: #fff;
+  --title-color-light: #111;
+  --tag-light: #f7f7f7;
+  --tag-dark: #fcfbf2;
+  --title-color-dark: rgba(255, 255, 255, 0.80);
+  --link-color-light: #d23719;
+  --link-color-dark: #1c88e8;
+  --button-color-light: #d23719;
+  --button-color-dark: #3b7fc6;
+  --text-light: #cdcdcd;
+  --accent-blue: #1C91E1;
+  --accent-red: #ca2017;
+  --font-stack-mono: "iA Writer Mono", monospace;
+  --font-stack-sans: "Source Sans 3", "-apple-system", BlinkMacSystemFont, "helvetica neue", Helvetica, Arial, sans-serif;
+  color-scheme: light dark;
+  --font-stack-serif: Georgia, serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+a {
+  text-decoration: none;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+small,
+sub,
+sup,
+.small {
+  font-size: 1.4rem;
+}
+
+a,
+a:visited {
+  color: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-y: scroll;
+  font-family: var(--font-stack-mono);
+  height: -webkit-fill-available;
+}
+
+body {
+  line-height: 1.8;
+  font-weight: 400;
+  min-height: 100%;
+  font-size: 1.6rem;
+  -moz-font-feature-settings:"liga" 1!important;
+  font-feature-settings:"liga" 1!important;
+  background-color: var(--bg-light);
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  color: var(--text-color-light);
+  overflow-x: hidden;
+  background: url('https://images.unsplash.com/photo-1569271532860-dd35503aaf1f?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
+  background-size: cover;
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: "Cartridge", var(--font-stack-sans) !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Cartridge", var(--font-stack-sans);
+  font-weight: bold;
+  margin-bottom: 1.3rem;
+  line-height: 1.3;
+}
+
+h1 a, h2 a, h3 a {
+  color: var(--title-color-light);
+}
+
+ul, ol {
+  list-style-position: inside;
+  margin-bottom: 2rem;
+}
+
+ul li, ol li {
+  margin-bottom: 0.5rem;
+}
+
+main a, main a:visited {
+  color: var(--link-color-light);
+  font-weight: 600;
+}
+
+main p {
+  margin-bottom: 1.3rem;
+}
+
+main blockquote {
+  border-left: 5px solid var(--link-color-light);
+  padding-left: 15px;
+  font-style: italic;
+}
+
+.youtube-embed {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.navthree {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navthree h3 {
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  line-height: 11px;
+  margin-bottom: 31px;
+  color: #111;
+  letter-spacing: 2px;
+}
+
+.navthree ul {
+  list-style-type: none;
+}
+
+.navthree ul li {
+  padding-left: 0;
+  font-size: 1.6rem;
+  line-height: 16px;
+  margin-bottom: 12px;
+}
+
+.navthree ul li a {
+  color: #111;
+  transition-duration: 0.5s;
+  font-weight: 400;
+}
+
+.container {
+  margin: 5rem 0;
+}
+
+.cover {
+  flex: 1;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wrapper .inner {
+  font-size: 1.6rem;
+  background-color: var(--bg-light);
+  margin: 0 auto;
+  max-width: 80rem;
+  padding: 5rem;
+}
+
+.page-header {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.page-header img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.page-header h1 {
+  margin: 0;
+}
+
+.site-footer {
+  margin-top: 3rem;
+  font-family: var(--font-stack-mono);
+  font-size: 1.6rem;
+  border-top: 5px dotted #eee;
+  padding-top: 30px;
+}
+
+.site-footer .navthree {
+  margin-top: 3rem;
+}
+
+.site-footer a svg {
+  display: inline;
+  fill: #ccc;
+}
+
+.threads-instagram {
+  line-height: 1;
+  display: inline-flex;
+  align-items: last baseline;
+  gap: 1rem;
+}
+
+.threads-instagram a {
+  display: inline-flex;
+  align-items: center;
+}
+
+.threads-instagram a svg {
+  fill: var(--text-color-light);
+  margin-right: 0.5rem;
+}
+
+.colophon {
+  margin-top: 3rem;
+  margin-bottom: 0;
+}
+
+.author-link:is(:focus, :hover, :visited ) {
+  color: var(--text-color-light);
+  font-weight: bold;
+}
+
+time {
+  color: #575757;
+}
+
+.post-content li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-meta {
+  font-size: 1.5rem;
+  font-family: var(--font-stack-mono);
+}
+
+.buttondown-form {
+  display: flex;
+  flex-wrap: wrap;
+}
+.buttondown-form label {
+  position: absolute;
+  left: -5000px;
+}
+.buttondown-form > input {
+  flex: 1 1 10ch;
+}
+.buttondown-form > input[type=email] {
+  flex: 3 1 30ch;
+}
+.buttondown-form input {
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  font-size: 1.5rem;
+}
+.buttondown-form input[type=submit] {
+  background-color: var(--accent-blue);
+  color: #fff;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.buttondown-form input[type=submit]:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.subscriber-promise {
+  text-align: center;
+}
+.subscriber-promise strong {
+  color: var(--text-light);
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--bg-dark);
+    color: var(--text-color-dark);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  main a, main a:visited {
+    color: var(--link-color-dark);
+  }
+
+  main h1, main h2, main h3, main strong {
+    color: #fff;
+  }
+  .navthree ul li a {
+    color: #969CA6;
+  }
+  .navthree h3 {
+    color: #969CA6;
+  }
+  .author-link:is(:focus, :hover, :visited ) {
+    color: var(--text-color-dark);
+  }
+  .buttondown-form input[type=submit] {
+    background-color: var(--accent-red);
+  }
+  .threads-instagram a svg {
+    fill: var(--text-color-dark);
+  }
+  main blockquote {
+    border-left: 5px solid var(--link-color-dark);
+  }
+  .wrapper .inner {
+    background-color: var(--bg-dark);
+  }
+}
+
+@media (max-width: 820px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+  .cover {
+    height: 40vh;
+  }
+  .wrapper {
+    width: 100%;
+    height: auto;
+    min-height: auto;
+  }
+
+  .wrapper .inner {
+    padding: 5rem 5%;
+  }
+}
+
+@media (max-width: 520px) {
+  .navthree {
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  main a {
+    transition: none;
+  }
+}
