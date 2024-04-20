@@ -366,9 +366,10 @@ main blockquote {
 }
 
 .page-header img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+  border-radius: 100%;
+  width: 105px;
+  border: 7px solid #fff;
+  background: var(--bg-color);
 }
 
 .page-header h1 {
@@ -518,9 +519,15 @@ time {
   main blockquote {
     border-left: 5px solid var(--link-color-dark);
   }
-  .wrapper .inner {
+  .wrapper .inner, .home_posts {
     background-color: var(--bg-dark);
+    color: var(--text-color-dark);
   }
+
+  .home_posts {
+    list-style: none;
+  }
+
   .home_columns .post-list {
     background-color: var(--bg-dark);
   }
