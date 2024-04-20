@@ -311,6 +311,7 @@ main blockquote {
   list-style: none;
   background: var(--bg-light);
   color: var(--text-light);
+  padding: 5rem;
 }
 
 .itsme {
@@ -325,11 +326,6 @@ main blockquote {
 
 .home_columns {
   gap: 1rem;
-}
-
-.home_columns .post-list {
-  background-color: var(--bg-light);
-  padding: 5rem;
 }
 
 .home_columns .home_blogroll {
