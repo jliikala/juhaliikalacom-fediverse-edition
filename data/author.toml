@@ -2,8 +2,10 @@
 
 name = "Juha Liikala"
 name_short = "Juha"
-description = "I'm a front-end developer and pixel tweaker from Oulu, Finland. Been tinkering with websites and applications professionally since 2005, and as a hobby even longer. A passionate traveler. Enjoy sci-fi and horror movies. Also, a fan of synthwave and Blade Runner-style musical landscapes."
+description_alt = "I'm a front-end developer and pixel tweaker from Oulu, Finland. Been tinkering with websites and applications professionally since 2005, and as a hobby even longer. A passionate traveler. Enjoy sci-fi and horror movies. Also, a fan of synthwave and Blade Runner-style musical landscapes."
+description_extra = "Also, a Finnish web developer, designer, blogger and founder of tiny digital product studio called Stripped Bare Studios. I've been building websites, products & software for a living since 2001."
 threads_url = "https://www.threads.net/@nomadcouch"
 instagram_url = "https://www.instagram.com/nomadcouch/"
 microblog_url = "https://micro.blog/juha"
-fediverse_username = "@juhajuhaliikala.com"
+mastodon_url = "https://moth.social/@juha"
+fediverse_username = "@juha@juhaliikala.com"
