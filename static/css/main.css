@@ -529,7 +529,7 @@ time {
   }
   .profile_photo { width: 60px; height: 60px; }
   .home_blogroll { display: none; }
-  .home_posts { width: 100%; padding-left: 1rem;
+  .home_posts { flex: auto; width: 100%; padding-left: 1rem;
 	padding-right: 1rem;}
 }
 
