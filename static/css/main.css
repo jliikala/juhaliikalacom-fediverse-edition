@@ -539,6 +539,10 @@ time {
     color: var(--text-color-dark);
   }
 
+  .home_posts {
+    color: var(--text-color-dark);
+  }
+
   .home_columns .post-list {
     background-color: var(--bg-dark);
   }
