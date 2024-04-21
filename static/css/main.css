@@ -239,10 +239,11 @@ main blockquote {
 
 .page-content {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
-.page-content .inner {
+.page-content .main {
   font-size: 1.6rem;
   background-color: var(--bg-light);
   color: var(--text-light);
@@ -260,23 +261,11 @@ main blockquote {
   color: var(--text-light);
 }
 
-.page-content aside {
+.page-content .side {
   padding: 2rem 1rem;
   background: var(--bg-light-opaq);
   color: var(--text-light);
   align-self: flex-start;
-}
-
-.cover {
-  flex: 1;
-  overflow: hidden;
-  height: 100vh;
-}
-
-.cover img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .wrapper .inner {
@@ -491,9 +480,6 @@ time {
   .container {
     flex-direction: column;
     height: auto;
-  }
-  .cover {
-    height: 40vh;
   }
   .wrapper {
     width: 100%;
