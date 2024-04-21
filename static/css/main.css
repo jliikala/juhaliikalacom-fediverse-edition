@@ -547,6 +547,10 @@ time {
     color: var(--text-dark);
   }
 
+  .side ul:last-of-type {
+    margin-bottom: 0;
+  }
+
   .page-header img {
     border-radius: 100%;
     border: 3px solid var(--bg-dark);
