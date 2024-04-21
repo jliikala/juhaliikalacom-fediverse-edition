@@ -221,6 +221,7 @@ main blockquote {
   max-width: 120rem;
   margin: 0 auto;
   margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 .top-head {
@@ -255,6 +256,11 @@ main blockquote {
   gap: 1rem;
   flex-wrap: wrap;
 }
+.post-tags {
+  list-style: none;
+  display: inline-flex;
+  gap: 1rem;
+}
 
 .page-content .main {
   font-size: 1.6rem;
@@ -273,7 +279,7 @@ main blockquote {
 }
 
 .top-head .inner {
-  padding: 5rem 5rem;
+  padding: 5rem 3rem;
   background-color: var(--bg-light);
   color: var(--text-light);
 }
@@ -303,7 +309,7 @@ main blockquote {
 
 .page-header img {
   border-radius: 100%;
-  border: 7px solid var(--bg-light);
+  border: 3px solid var(--bg-light);
   background: var(--bg-light);
 	padding: 5px;
 }
@@ -328,8 +334,9 @@ main blockquote {
 
 .itsme {
   position: absolute;
-  top: 15px;
-  left: 73px;
+  top: 0px;
+  left: 77px;
+  height: 1.5em;
 }
 
 .page-header h1 {
@@ -503,8 +510,7 @@ time {
 
   .page-header img {
     border-radius: 100%;
-    width: 105px;
-    border: 7px solid var(--bg-dark);
+    border: 3px solid var(--bg-dark);
     background: var(--bg-dark);
   }
   .post_list .h-entry {
