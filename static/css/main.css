@@ -506,7 +506,7 @@ time {
   }
   
   .fediverse-name {
-    font-size: 90%;
+    font-size: 85%;
   }
 
 @media (prefers-color-scheme: dark) {
