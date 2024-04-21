@@ -180,10 +180,17 @@ main blockquote {
   font-style: italic;
 }
 
-.fediverse-replies {
+.microblog_conversation {
     margin-top: 4rem;
     border-top: 1px dashed var(--bg-light);
     padding-top: 4rem;
+}
+
+.microblog_conversation::before {
+  content: 'Replies from Fediverse';
+  font-size: 1.9rem;
+  margin-bottom: 1.3rem;
+  font-weight: bold;
 }
 
 .microblog_post {
@@ -567,7 +574,7 @@ time {
     color: var(--accent-blue);
   }
 
-  .fediverse-replies {
+  .microblog_conversation {
     border-top: 1px dashed var(--bg-dark);
   }
 

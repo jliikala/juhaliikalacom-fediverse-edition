@@ -43,10 +43,7 @@
 {{ end }}
 
 {{ if .Site.Params.include_conversation }}
-<div class="fediverse-replies">
-  <h3>Replies from Fediverse</h3></h3>
-  <script type="text/javascript" src="https://micro.blog/conversation.js?url={{ .Permalink }}"></script>
-</div>
+<script type="text/javascript" src="https://micro.blog/conversation.js?url={{ .Permalink }}"></script>
 {{ end }}
 
 {{ end }}
