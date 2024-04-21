@@ -194,6 +194,10 @@ main blockquote {
   margin-bottom: 0;
 }
 
+.microblog_time {
+  font-size: 90%;
+}
+
 .microblog_user {
   display: flex;
   gap: 1rem;
