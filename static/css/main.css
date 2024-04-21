@@ -180,6 +180,36 @@ main blockquote {
   font-style: italic;
 }
 
+.fediverse-replies {
+    margin-top: 4rem;
+    border-top: 1px dashed var(--bg-light);
+    padding-top: 4rem;
+}
+
+.microblog_post {
+  margin-bottom: 3rem;
+}
+
+.microblog_post:last-of-type {
+  margin-bottom: 0;
+}
+
+.microblog_user {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.microblog_user img {
+  margin-bottom: 0;
+  border-radius: 100%;
+}
+
+.microblog_text a {
+  color: var(--accent-red);
+}
+
 .youtube-embed {
   margin-bottom: 2rem;
   margin-top: 2rem;
@@ -259,6 +289,8 @@ main blockquote {
   list-style: none;
   display: inline-flex;
   gap: 1rem;
+  margin-bottom: 0;
+  font-size: 90%;
 }
 
 .page-content .main {
@@ -334,7 +366,7 @@ main blockquote {
 .itsme {
   position: absolute;
   top: 0px;
-  left: 77px;
+  left: 70px;
   height: 1.5em;
 }
 
@@ -397,6 +429,10 @@ main blockquote {
 }
 
 time {
+  color: var(--accent-red);
+}
+
+.post-content a {
   color: var(--accent-red);
 }
 
@@ -516,6 +552,18 @@ time {
     border-bottom: 1px dashed var(--text-dark);
   }
   time {
+    color: var(--accent-blue);
+  }
+
+  .post-content a {
+    color: var(--accent-blue);
+  }
+
+  .fediverse-replies {
+    border-top: 1px dashed var(--bg-dark);
+  }
+
+  .microblog_text a {
     color: var(--accent-blue);
   }
 }
