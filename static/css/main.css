@@ -284,7 +284,7 @@ main blockquote {
 }
 
 .page-content .side {
-  padding: 2rem;
+  padding: 3rem 2rem;
   background: var(--bg-light-opaq);
   color: var(--text-light);
   align-self: flex-start;
@@ -303,7 +303,7 @@ main blockquote {
 .page-header {
   display: flex;
   flex-direction: column;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .page-header img {
@@ -529,6 +529,7 @@ time {
     flex-direction: column;
     height: auto;
     margin-top: 0;
+    margin-bottom: 0;
   }
   .page-content { gap: 0; }
   .page-content .main {
