@@ -500,6 +500,11 @@ time {
   color: var(--text-light);
 }
 
+.top-head {
+  padding-bottom: 2rem;
+  border-bottom: 1px dashed var(--text-light);
+  }
+
 @media (prefers-color-scheme: dark) {
   body {
     background-color: var(--bg-dark);
@@ -583,6 +588,10 @@ time {
   .microblog_text a {
     color: var(--accent-blue);
   }
+  
+  .top-head {
+  border-bottom: 1px dashed var(--text-dark);
+  }
 }
 
 @media (max-width: 820px) {
@@ -618,10 +627,7 @@ time {
 .top-head .inner {
   padding: 1rem 2rem;
 }
-.top-head {
-  padding-bottom: 2rem;
-  border-bottom: 1px dashed var(--text-dark);
-  }
+
 .home_posts {
   padding: 1rem;
 }
