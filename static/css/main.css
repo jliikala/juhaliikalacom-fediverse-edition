@@ -85,6 +85,10 @@ p, img, figure, ul, ol, dl, li {
   margin-bottom: 1rem;
 }
 
+ul li:last-of-type, ol li:last-of-type {
+  margin-bottom: 0;
+}
+
 a {
   text-decoration: none;
 }
@@ -256,9 +260,9 @@ main blockquote {
   font-size: 1.6rem;
   background-color: var(--bg-light);
   color: var(--text-light);
-  margin: 0 auto;
-  max-width: 80rem;
-  padding: 3rem 5rem;
+  max-width: 78rem;
+  padding: 3rem;
+  align-self: flex-start;
 }
 .page-header .inner {
   position: relative;
@@ -275,7 +279,7 @@ main blockquote {
 }
 
 .page-content .side {
-  padding: 2rem 1rem;
+  padding: 2rem;
   background: var(--bg-light-opaq);
   color: var(--text-light);
   align-self: flex-start;
@@ -484,6 +488,16 @@ time {
   }
 
   .home_blogroll a {
+    color: var(--text-dark);
+  }
+
+  .page-content .main {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+  }
+
+  .page-content .side {
+    background: var(--bg-dark-opaq);
     color: var(--text-dark);
   }
 
