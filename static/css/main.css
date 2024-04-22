@@ -510,11 +510,6 @@ time {
   color: var(--text-light);
 }
 
-.top-head {
-  padding-bottom: 2rem;
-  border-bottom: 1px dashed var(--text-light);
-}
-
 .site-title {
   position: relative;
 }
