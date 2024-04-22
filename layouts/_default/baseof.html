@@ -12,6 +12,7 @@
         {{ block "main" . }}{{ end }}
       </div>
       <aside class="side">
+        {{ if .IsHome }}
         <h3>Blogroll - Recommendations</h3>
         <ul>
           {{ range .Site.Data.blogrolls.recommendations }}
@@ -19,6 +20,7 @@
           {{ end }}
         </ul>
         <p>Blogroll as: <a href="/.well-known/recommendations.opml">OPML</a> | <a href="/.well-known/recommendations.json">JSON</a></p>
+        {{ end }}
       </aside>
     </div>
   </div>
