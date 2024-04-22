@@ -18,6 +18,7 @@
             <li><a href="{{ .url }}">{{ .name }}: <span>{{ (urls.Parse .url).Hostname }}</span></a></li>
           {{ end }}
         </ul>
+        <p>Blogroll as: <a href="/.well-known/recommendations.opml">OPML</a> | <a href="/.well-known/recommendations.json">JSON</a></p>
       </aside>
     </div>
   </div>
