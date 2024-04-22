@@ -327,7 +327,7 @@ main blockquote {
 }
 
 .top-head .inner {
-  padding: 5rem 3rem;
+  padding: 5rem 2rem 4rem 2rem;
   background-color: var(--bg-light);
   color: var(--text-light);
 }
@@ -382,9 +382,9 @@ main blockquote {
 
 .itsme {
   position: absolute;
-  top: 0px;
-  left: 70px;
-  height: 1.5em;
+  top: -10px;
+  left: 165px;
+  height: 1.8rem;
 }
 
 .page-header h1 {
@@ -513,6 +513,10 @@ time {
 .top-head {
   padding-bottom: 2rem;
   border-bottom: 1px dashed var(--text-light);
+}
+
+.site-title {
+  position: relative;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -660,7 +664,7 @@ time {
   }
 
   .top-head .inner {
-    padding: 1rem 2rem;
+    padding: 4rem 2rem;
   }
 
   .top-head {
@@ -696,12 +700,7 @@ time {
 
   .home_blogroll { display: none; padding: 0;}
 
-  .home_posts { flex: auto; width: 100%; padding: 0;}
-
-  .itsme {
-    left: 50px;
-    height: 1.4em;
-  }
+  .home_posts { flex: auto; width: 100%; padding: 0; }
 
   .description {
     font-size: 95%;
