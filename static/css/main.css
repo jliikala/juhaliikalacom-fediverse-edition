@@ -337,7 +337,13 @@ main blockquote {
   background: var(--bg-light-opaq);
   color: var(--text-light);
   align-self: flex-start;
+  max-width: 41rem;
 }
+
+.side .subscribe-block {
+  margin-bottom: 3rem;
+}
+
 .profile_photo { width: 100px; height: 100px; }
 
 .wrapper .inner {

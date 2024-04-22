@@ -12,14 +12,15 @@
         {{ block "main" . }}{{ end }}
       </div>
       <aside class="side">
-        <h3>Subscribe to blog updates</h3>
-        <p>Subscribe to the email newsletter for this blog. By subscribing, you get new articles from this blog via email as soon as they go live.</p>
-        <p>It’s free and you can unsubscribe anytime. 😊</p>
-        <form class="subscribe-form" method="POST" action="https://micro.blog/users/subscribe/65934">
-          <input type="text" name="email" size="30" placeholder="Your email address">
-          <input type="submit" value="Subscribe">
-        </form>
-
+        <div class="subscribe-block">
+          <h3>Subscribe to blog updates</h3>
+          <p>Subscribe to the email newsletter for this blog. By subscribing, you get new articles from this blog via email as soon as they go live.</p>
+          <p>It’s free and you can unsubscribe anytime. 😊</p>
+          <form class="subscribe-form" method="POST" action="https://micro.blog/users/subscribe/65934">
+            <input type="text" name="email" size="30" placeholder="Your email address">
+            <input type="submit" value="Subscribe">
+          </form>
+        </div>
         {{ if .IsHome }}
         <h3>Blogroll - Recommendations</h3>
         <ul>
