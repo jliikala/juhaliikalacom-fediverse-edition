@@ -495,7 +495,7 @@ time {
 }
 
 .subscribe-form input[type=submit] {
-  background-color: var(--accent-blue);
+  background-color: var(--button-color-light);
   color: #fff;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -549,7 +549,7 @@ time {
   }
 
   .subscribe-form input[type=submit] {
-    background-color: var(--accent-red);
+    background-color: var(--button-color-dark);
   }
 
   .threads-instagram a svg {
