@@ -511,6 +511,7 @@ time {
 
 .subscriber-promise {
   text-align: center;
+  font-size: 90%;
 }
 .subscriber-promise strong {
   color: var(--text-light);
