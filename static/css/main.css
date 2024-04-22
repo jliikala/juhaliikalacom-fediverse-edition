@@ -613,11 +613,6 @@ time {
     color: var(--link-color-dark);
   }
 
-  @media (max-width: 820px) {
-    .top-head {
-      border-bottom: 1px dashed var(--text-dark);
-    }
-  }
 }
 
 @media (max-width: 820px) {
@@ -664,6 +659,12 @@ time {
 
   .top-head {
     border-bottom: 1px dashed var(--text-light);
+  }
+
+  @media (prefers-color-scheme:dark) {
+    .top-head {
+      border-bottom: 1px dashed var(--text-dark);
+    }
   }
 
   .home_posts {
