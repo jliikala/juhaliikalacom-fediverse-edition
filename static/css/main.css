@@ -464,31 +464,31 @@ time {
   font-family: var(--font-stack-mono);
 }
 
-.buttondown-form {
+.subscribe-form {
   display: flex;
   flex-wrap: wrap;
 }
 
-.buttondown-form label {
+.subscribe-form label {
   position: absolute;
   left: -5000px;
 }
 
-.buttondown-form > input {
+.subscribe-form > input {
   flex: 1 1 10ch;
 }
 
-.buttondown-form > input[type=email] {
+.subscribe-form > input[type=email] {
   flex: 3 1 30ch;
 }
 
-.buttondown-form input {
+.subscribe-form input {
   padding: 10px 20px;
   border: 1px solid #ddd;
   font-size: 1.5rem;
 }
 
-.buttondown-form input[type=submit] {
+.subscribe-form input[type=submit] {
   background-color: var(--accent-blue);
   color: #fff;
   letter-spacing: 0.15em;
@@ -498,7 +498,7 @@ time {
   cursor: pointer;
 }
 
-.buttondown-form input[type=submit]:hover {
+.subscribe-form input[type=submit]:hover {
   text-decoration: none;
   opacity: 0.8;
 }
@@ -542,7 +542,7 @@ time {
     color: var(--text-dark);
   }
 
-  .buttondown-form input[type=submit] {
+  .subscribe-form input[type=submit] {
     background-color: var(--accent-red);
   }
 
