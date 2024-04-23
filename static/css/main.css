@@ -293,7 +293,7 @@ main blockquote {
   margin: 0;
 }
 
-.fediverse-name a {
+.fediverse-name a, .e-content a {
   color: var(--link-color-light);
 }
 
@@ -616,7 +616,7 @@ time {
     color: var(--accent-blue);
   }
 
-  .fediverse-name a {
+  .fediverse-name a, .e-content a {
     color: var(--link-color-dark);
   }
 
