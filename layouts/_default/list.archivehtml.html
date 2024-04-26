@@ -8,7 +8,7 @@
 	<h3>Posts by category</h3>
 	<ul class="category-list">
 		{{ range $list }}
-		<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+		<li><a href="{{ .Permalink }}#post-content">{{ .Title }}</a></li>
 		{{ end }}
 	</ul>
 </div>
