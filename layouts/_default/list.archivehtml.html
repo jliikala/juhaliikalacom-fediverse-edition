@@ -19,7 +19,7 @@
 	{{ range $list }}
 
 	<div class="h-entry">
-		<a href="{{ .Permalink }}" class="u-url"><time class="dt-published" datetime="{{ .Date.Format "02.01.2006 15:04:05 -0700" }}">{{ .Date | time.Format ":date_long" }}</time></a>:
+		<a href="{{ .Permalink }}#post-content" class="u-url"><time class="dt-published" datetime="{{ .Date.Format "02.01.2006 15:04:05 -0700" }}">{{ .Date | time.Format ":date_long" }}</time></a>:
 		{{ if .Title }}
 			<span class="p-name"><b>{{ .Title }}</b></span>
 			<div class="p-summary">{{ .Summary | truncate 350 }}</div>
