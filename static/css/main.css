@@ -289,7 +289,7 @@ main blockquote {
   gap: 2rem;
 }
 
-.title-fediverse-handle h1 {
+.title-fediverse-handle .site-title {
   margin: 0;
 }
 
@@ -393,9 +393,10 @@ main blockquote {
   height: 1.8rem;
 }
 
-.page-header h1 {
+.page-header .site-title {
   margin: 0;
   line-height: 1;
+  font-size: 3rem;
 }
 
 .home_columns {
@@ -519,6 +520,20 @@ time {
 
 .site-title {
   position: relative;
+}
+
+.archive-categories {
+  list-style: none;
+  column-count: 3;
+  margin: 3rem 0;
+}
+
+.full-archives .h-entry {
+  margin-bottom: 3rem;
+}
+
+.full-archives .h-entry:last-of-type {
+  margin-bottom: 0;
 }
 
 @media (prefers-color-scheme: dark) {
