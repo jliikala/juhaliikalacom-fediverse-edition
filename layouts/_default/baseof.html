@@ -11,6 +11,7 @@
       <div class="main">
         {{ block "main" . }}{{ end }}
       </div>
+      {{ if and .IsHome (eq .Type "post") }}
       <aside class="side">
         <div class="subscribe-block">
           <h3>Subscribe to juhaliikala.com weekly</h3>
@@ -21,7 +22,6 @@
           </form>
           <p class="subscriber-promise">It's free and you can unsubscribe anytime.</p>
         </div>
-        {{ if .IsHome }}
         <h3>Blogroll - Recommendations</h3>
         <ul>
           {{ range .Site.Data.blogrolls.recommendations }}
@@ -29,8 +29,8 @@
           {{ end }}
         </ul>
         <p>Blogroll as: <a href="/.well-known/recommendations.opml">OPML</a> | <a href="/.well-known/recommendations.json">JSON</a></p>
-        {{ end }}
       </aside>
+      {{ end }}
     </div>
   </div>
 
