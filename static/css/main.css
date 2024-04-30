@@ -344,7 +344,7 @@ main blockquote {
   margin-bottom: 3rem;
 }
 
-.profile_photo { width: 100px; height: 100px; }
+.profile_photo { width: 100px; height: 100px; margin: 0; }
 
 .wrapper .inner {
   font-size: 1.6rem;
@@ -368,9 +368,18 @@ main blockquote {
 	padding: 5px;
 }
 
-.profile-photo-link {
+.profile-photo-link, .header-subscribe-btn {
   position: absolute;
 	top: -50px;
+}
+
+.header-subscribe-btn {
+  right: 30px;
+  top: -18px;
+  background: var(--accent-blue);
+  color: #fff;
+  border-radius: 5px;
+  padding: 3px 15px;
 }
 
 .post_list .h-entry {

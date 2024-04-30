@@ -4,6 +4,9 @@
 		<a href="/" class="profile-photo-link">
 			<img class="profile_photo u-photo" src="{{ "avatar160.jpg" | relURL }}" alt="{{ .Site.Title }} Profile Photo">
 		</a>
+		<a href="{{ "subscribe" | absURL }}" class="header-subscribe-btn">
+			Subscribe
+		</a>
 		<div class="title-fediverse-handle">
 			{{ if .IsHome }}<h1 class="site-title">{{ else }}<h2 class="site-title">{{ end }}
 				<a class="p-name u-url" href="/">{{ .Site.Data.site.name }}</a>
