@@ -373,13 +373,8 @@ main blockquote {
 	top: -50px;
 }
 
-.header-subscribe-btn {
-  right: 30px;
-  top: -18px;
-  background: var(--accent-blue);
-  color: #fff;
-  border-radius: 5px;
-  padding: 3px 15px;
+.site-header .header-subscribe-btn {
+  display: none;
 }
 
 .post_list .h-entry {
@@ -761,6 +756,16 @@ time {
 
   .description {
     font-size: 95%;
+  }
+
+  .site-header .header-subscribe-btn {
+    right: 30px;
+    top: -18px;
+    background: var(--accent-blue);
+    color: #fff;
+    border-radius: 5px;
+    padding: 3px 15px;
+    display: block;
   }
 }
 
