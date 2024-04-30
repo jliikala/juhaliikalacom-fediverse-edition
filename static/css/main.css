@@ -318,6 +318,12 @@ main blockquote {
   padding: 3rem;
   align-self: flex-start;
 }
+
+.main.full-width {
+  max-width: 100%;
+  width: 100%;
+}
+
 .page-header .inner {
   position: relative;
 }
