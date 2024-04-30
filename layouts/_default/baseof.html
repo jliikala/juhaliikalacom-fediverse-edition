@@ -11,7 +11,7 @@
       <div class="main">
         {{ block "main" . }}{{ end }}
       </div>
-      {{ if and .IsHome (eq .Type "post") }}
+      {{ if or (and .IsPage (eq .Type "post")) .IsHome }}
       <aside class="side">
         <div class="subscribe-block">
           <h3>Subscribe to juhaliikala.com weekly</h3>
