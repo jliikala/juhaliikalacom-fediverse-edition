@@ -319,9 +319,13 @@ main blockquote {
   align-self: flex-start;
 }
 
-.main.full-width {
+.main.fediverse, .main.subscribe, .main.photos, .main.archive {
   max-width: 100%;
   width: 100%;
+}
+
+.main.fediverse .side, .main.subscribe .side, .main.photos .side, .main.archive .side {
+  display: none;
 }
 
 .page-header .inner {
