@@ -319,12 +319,12 @@ main blockquote {
   align-self: flex-start;
 }
 
-.main.fediverse, .main.subscribe, .main.photos, .main.archive {
+.page-content.fediverse, .page-content.subscribe, .page-content.photos, .page-content.archive {
   max-width: 100%;
   width: 100%;
 }
 
-.main.fediverse .side, .main.subscribe .side, .main.photos .side, .main.archive .side {
+.page-content.fediverse .side, .page-content.subscribe .side, .page-content.photos .side, .page-content.archive .side {
   display: none;
 }
 
