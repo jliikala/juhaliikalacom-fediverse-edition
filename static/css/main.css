@@ -796,6 +796,13 @@ time {
   .navthree {
     flex-direction: column;
   }
+  .top-nav {
+    padding: 10px 10px;
+  }
+
+  .social-menu span {
+    display: none;
+  }
 }
 
 @media (prefers-reduced-motion) {
