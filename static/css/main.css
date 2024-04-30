@@ -319,7 +319,7 @@ main blockquote {
   align-self: flex-start;
 }
 
-.page-content.fediverse, .page-content.subscribe, .page-content.photos, .page-content.archive {
+.page-content.fediverse .main, .page-content.subscribe .main, .page-content.photos .main, .page-content.archive .main {
   max-width: 100%;
   width: 100%;
 }
