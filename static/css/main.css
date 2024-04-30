@@ -798,12 +798,6 @@ time {
     padding: 3px 15px;
     display: block;
   }
-}
-
-@media (max-width: 520px) {
-  .navthree {
-    flex-direction: column;
-  }
   .top-nav {
     padding: 10px 10px;
     font-size: 90%;
@@ -811,6 +805,12 @@ time {
 
   .social-menu span {
     display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .navthree {
+    flex-direction: column;
   }
 }
 
