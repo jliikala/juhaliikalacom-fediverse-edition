@@ -9,13 +9,15 @@
   {{ else }}
   <meta name="twitter:title" content="{{ .Site.Title }}">
   <meta property="og:title" content="{{ .Site.Title }}">
+  <meta name="twitter:image" content="https://micro.juhaliikala.com/cover.jpg">
+  <meta property="og:image" content="https://micro.juhaliikala.com/cover.jpg">
   {{ end }}
   {{ if .IsHome }}
   <meta name="twitter:description" content="{{ .Site.Params.itunes_description | truncate 60 }}">
   <meta name="og:description" content="{{ .Site.Params.itunes_description | truncate 60 }}">
   <meta name="description" content="{{ .Site.Params.itunes_description }}">
-  <meta name="twitter:image" content="{{ .Site.Author.avatar }}">
-  <meta property="og:image" content="{{ .Site.Author.avatar }}">
+  <meta name="twitter:image" content="https://micro.juhaliikala.com/cover.jpg">
+  <meta property="og:image" content="https://micro.juhaliikala.com/cover.jpg">
   {{ else }}
   <meta name="twitter:description" content="{{ .Summary | truncate 60 }}">
   <meta name="og:description" content="{{ .Summary | truncate 60 }}">
