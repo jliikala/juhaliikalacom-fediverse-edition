@@ -534,13 +534,12 @@ time {
 }
 
 .reply-buttons li {
-  display: inline;
-  margin-right: 0.2em;
-  line-height: 2.15em;
+  display: inline-flex;
   white-space: nowrap;
+  flex-wrap: wrap;
 }
 
-.reply-buttons button {
+.reply-buttons button, .reply-buttons a {
   vertical-align: baseline;
   padding: 5px 10px;
   font-size: 0.9em;
@@ -550,7 +549,6 @@ time {
   color: var(--text-light);
   -webkit-appearance: none;
   appearance: none;
-  margin-top: 5px;
   font-weight: normal;
   cursor: pointer;
 }
