@@ -1,4 +1,4 @@
-{{ $latestPost := .Site.RegularPages.ByType "post" | first }}
+{{ $latestPost := where .Site.RegularPages "Type" "post" | first }}
 {{ with $latestPost }}
 <article class="latest-article">
   <figure class="latest-article-cover">
