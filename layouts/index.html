@@ -1,49 +1,55 @@
 {{ define "main" }}
-{{ with first 1 (where .Site.RegularPages "Type" "post") }}
-  {{ partial "latest-home-post.html" . }}
-{{ end }}
-<div class="from-feed-header">
-  <h3>From the feed</h3>
-  <span class="fediverse-name">- Follow along on Fediverse: <a href="https://micro.juhaliikala.com/fediverse">@juha@juhaliikala.com</a></span>
-</div>
-<div class="posts h-feed">
-  <div class="post_list" role="main">
-    {{ $paginator := .Paginate (where .Site.Pages.ByDate.Reverse "Type" "post") }}
-    {{ range .Paginator.Pages }}
-    <div class="post-preview h-entry {{ range .Params.categories }} {{ . | urlize | lower }}{{ end }}">
-      <a href="{{ .Permalink }}#post-content" class="post-date u-url"><time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05 -0700" }}">{{ .Date.Format "Jan 2, 2006" }}</time> ∞</a>
-      {{ if .Title }}
-        <h2 class="post-title p-name"><a href="{{ .Permalink }}#post-content">{{ .Title }}</a></h2>
-          {{ if in .RawContent "<!--more-->" }}
-          <div class="p-summary">
-            {{ $splitContents := split .RawContent "<!--more-->" }}
-            {{ index $splitContents 0 | markdownify }}
-            <p><a class="read-more" href="{{ .Permalink }}#post-content">Read More →</a></p>
-          </div>
-          {{ else }}
-          <div class="e-content">
-            {{ .Content }}
+  {{ $posts := where .Site.Pages.ByDate.Reverse "Type" "post" }}
+  {{ $hidden_posts := where $posts "Params.categories" "intersect" (slice "featured") }}
+  {{ $posts = $posts | symdiff $hidden_posts }}
+      {{ $paginator := .Paginate ($posts) }}
+      {{ $list := $paginator.Pages }}
+      {{ if .Site.Taxonomies.categories.featured }}
+        {{ range first 1 .Site.Taxonomies.categories.featured }}
+          {{ partial "latest-home-post.html" . }}
+        {{ end }}
+      {{ end }}
+      <div class="from-feed-header">
+        <h3>From the feed</h3>
+        <span class="fediverse-name">- Follow along on Fediverse: <a href="https://micro.juhaliikala.com/fediverse">@juha@juhaliikala.com</a></span>
+      </div>
+      <div class="posts h-feed">
+        <div class="post_list" role="main">
+          {{ range $list  }}
+          <div class="post-preview h-entry {{ range .Params.categories }} {{ . | urlize | lower }}{{ end }}">
+            <a href="{{ .Permalink }}#post-content" class="post-date u-url"><time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05 -0700" }}">{{ .Date.Format "Jan 2, 2006" }}</time> ∞</a>
+            {{ if .Title }}
+              <h2 class="post-title p-name"><a href="{{ .Permalink }}#post-content">{{ .Title }}</a></h2>
+                {{ if in .RawContent "<!--more-->" }}
+                <div class="p-summary">
+                  {{ $splitContents := split .RawContent "<!--more-->" }}
+                  {{ index $splitContents 0 | markdownify }}
+                  <p><a class="read-more" href="{{ .Permalink }}#post-content">Read More →</a></p>
+                </div>
+                {{ else }}
+                <div class="e-content">
+                  {{ .Content }}
+                </div>
+                {{ end }}
+            {{ else }}
+              <div class="e-content">
+                {{ .Content }}
+              </div>
+            {{ end }}
           </div>
           {{ end }}
-      {{ else }}
-        <div class="e-content">
-          {{ .Content }}
         </div>
+      </div>
+      <div class="post-nav">
+        {{ if $paginator.HasPrev }}
+        <span class="prev">
+          <a href="{{ $paginator.Prev.URL }}" title="Previous Page"><span class="arrow">← Newer Posts</span></a>
+        </span>
+        {{ end }}
+        {{ if $paginator.HasNext }}
+        <span class="next">
+          <a href="{{ $paginator.Next.URL }}"><span class="arrow">Older Posts →</span></a>
+        </span>
+        {{ end }}
+      </div>
       {{ end }}
-    </div>
-    {{ end }}
-  </div>
-</div>
-<div class="post-nav">
-  {{ if $paginator.HasPrev }}
-  <span class="prev">
-    <a href="{{ $paginator.Prev.URL }}" title="Previous Page"><span class="arrow">← Newer Posts</span></a>
-  </span>
-  {{ end }}
-  {{ if $paginator.HasNext }}
-  <span class="next">
-    <a href="{{ $paginator.Next.URL }}"><span class="arrow">Older Posts →</span></a>
-  </span>
-  {{ end }}
-</div>
-{{ end }}
