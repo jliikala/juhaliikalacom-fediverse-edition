@@ -1,6 +1,6 @@
 {{ define "main" }}
-{{ with first 1 (where .Site.Pages "Type" "post") }}
-  {{ partial "latest-home-post.html" . }}
+{{ with first 1 (where .Site.RegularPages "Type" "post") }}
+  {{ partial "latest-home-post.html" .Params }}
 {{ end }}
 <div class="from-feed-header">
   <h3>From the feed</h3>
