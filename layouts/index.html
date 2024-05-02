@@ -7,8 +7,6 @@
   {{ $featuredPost := "" }}
   {{ if .Site.Taxonomies.categories.featured }}
     {{ range first 1 .Site.Taxonomies.categories.featured }}
-      {{ $featuredPages := .Pages }}
-      {{ $featuredPost = $featuredPages | first 1 }}
       {{ partial "latest-home-post.html" $featuredPost }}
     {{ end }}
   {{ end }}
