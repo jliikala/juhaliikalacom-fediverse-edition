@@ -1,25 +1,26 @@
-{{ with first 1 (where .Site.Pages.ByDate.Reverse "Type" "post") }}
+{{ with first 1 (where .Site.RegularPages "Type" "post") }}
 <article class="latest-article">
   <figure class="latest-article-cover">
     <img src="https://images.unsplash.com/photo-1483104879057-379b6c2fe5a2?q=80&w=1440&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
   </figure>
   <div class="article-meta">
     <span>Latest article - </span>
-    <a href="{{ .Permalink }}#post-content" class="post-date u-url">
+    <a href="{{ .RelPermalink }}#post-content" class="post-date u-url">
       <time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05 -0700" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
        ∞
     </a>
   </div>
 
   {{ if .Title }}
-    <h2 class="post-title p-name"><a href="{{ .Permalink }}#post-content">{{ .Title }}</a></h2>
+    <h2 class="post-title p-name">
+      <a href="{{ .RelPermalink }}#post-content">{{ .Title }}</a></h2>
       {{ if in .RawContent "<!--more-->" }}
       <div class="p-summary">
         {{ $splitContents := split .RawContent "<!--more-->" }}
         {{ index $splitContents 0 | markdownify }}
       </div>
       <p class="read-more">
-        <a href="{{ .Permalink }}#post-content">Continue reading »</a>
+        <a href="{{ .RelPermalink }}#post-content">Continue reading »</a>
       </p>
       {{ else }}
       <div class="e-content">
