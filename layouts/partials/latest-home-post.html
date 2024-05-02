@@ -1,4 +1,4 @@
-{{ with first 1 (where .Site.RegularPages "Type" "post") }}
+{{ with first 1 (where .Site.Pages.ByDate.Reverse "Type" "post") }}
 <article class="latest-article">
   <figure class="latest-article-cover">
     <img src="https://images.unsplash.com/photo-1483104879057-379b6c2fe5a2?q=80&w=1440&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
