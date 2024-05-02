@@ -5,7 +5,7 @@
   </figure>
   <div class="article-meta">
     <span>Latest article - </span>
-    <a href="{{ .RelPermalink }}#post-content" class="post-date u-url">
+    <a href="{{ .Permalink }}" class="post-date u-url">
       <time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05 -0700" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
        ∞
     </a>
@@ -13,14 +13,14 @@
 
   {{ if .Title }}
     <h2 class="post-title p-name">
-      <a href="{{ .RelPermalink }}#post-content">{{ .Title }}</a></h2>
+      <a href="{{ .Permalink }}">{{ .Title }}</a></h2>
       {{ if in .RawContent "<!--more-->" }}
       <div class="p-summary">
         {{ $splitContents := split .RawContent "<!--more-->" }}
         {{ index $splitContents 0 | markdownify }}
       </div>
       <p class="read-more">
-        <a href="{{ .RelPermalink }}#post-content">Continue reading »</a>
+        <a href="{{ .Permalink }}">Continue reading »</a>
       </p>
       {{ else }}
       <div class="e-content">
