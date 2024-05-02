@@ -6,9 +6,7 @@
       {{ $list := $paginator.Pages }}
       {{ if .Site.Taxonomies.categories.featured }}
         {{ range first 1 .Site.Taxonomies.categories.featured }}
-          {{ range .Pages }}
-            {{ partial "latest-home-post.html" . }}
-          {{ end }}
+          {{ partial "latest-home-post.html" . }}
         {{ end }}
       {{ end }}
       <div class="from-feed-header">
