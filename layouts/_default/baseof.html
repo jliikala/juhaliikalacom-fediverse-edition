@@ -13,15 +13,15 @@
       </div>
       <aside class="side">
         <div class="subscribe-block">
-          <h3>Subscribe to juhaliikala.com weekly</h3>
-          <p>By subscribing, you get a weekly email dispatch from this blog on Sundays.</p>
+          <h3>Subscribe to latest articles</h3>
+          <p>By subscribing, you get the latest article via email as soon as it goes live .</p>
           <form class="subscribe-form" method="POST" action="https://micro.blog/users/subscribe/65934">
             <input type="text" name="email" size="30" placeholder="Your email address">
             <input type="submit" value="Subscribe">
           </form>
           <p class="subscriber-promise">It's free and you can unsubscribe anytime.</p>
         </div>
-        <h3>Blogroll - Recommendations</h3>
+        <h3>Recommended fellow bloggers</h3>
         <ul>
           {{ range .Site.Data.blogrolls.recommendations }}
             <li><a href="{{ .url }}">{{ .name }}: <span>{{ (urls.Parse .url).Hostname }}</span></a></li>
