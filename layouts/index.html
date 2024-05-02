@@ -4,6 +4,7 @@
   {{ $posts = $posts | symdiff $hidden_posts }}
   {{ $paginator := .Paginate ($posts) }}
   {{ $list := $paginator.Pages }}
+  {{ $featuredPost := "" }}
   {{ if .Site.Taxonomies.categories.featured }}
     {{ range first 1 .Site.Taxonomies.categories.featured }}
       {{ $featuredPost := .Pages | first }}
