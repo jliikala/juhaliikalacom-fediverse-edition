@@ -842,7 +842,7 @@ article p:last-of-type {
     background: #f0f0f0;
     padding: 3px 10px;
     border-radius: 10px;
-    color: #3c3c3c;
+    color: #3c3c3c !important;
   }
 }
 
