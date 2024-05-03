@@ -842,6 +842,7 @@ article p:last-of-type {
 
   .from-feed-header {
     flex-direction: column;
+    align-items: start;
   }
 }
 
