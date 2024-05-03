@@ -613,10 +613,11 @@ time {
 
 .from-feed-header {
   display: flex;
-  align-items: center;
   gap: 1rem;
   border-bottom: 1px dashed;
   padding-bottom: 2rem;
+  flex-direction: column;
+  align-items: start;
 }
 
 .from-feed-header h3 {
@@ -838,11 +839,6 @@ article p:last-of-type {
 
   .social-menu span {
     display: none;
-  }
-
-  .from-feed-header {
-    flex-direction: column;
-    align-items: start;
   }
 }
 
