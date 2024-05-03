@@ -1,7 +1,5 @@
 {{ define "main" }}
-<header class="post-header">
-	<h2 class="post-title">Archive</h2>
-</header>
+<h2 class="post-title">Archive</h2>
 {{ $list := ($.Site.GetPage "taxonomyTerm" "categories").Pages }}
 {{ if gt (len $list) 0 }}
 <div class="archive-categories">

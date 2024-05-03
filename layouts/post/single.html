@@ -1,16 +1,14 @@
 {{ define "main" }}
 <div id="post-content" class="post h-entry {{ range .Params.categories }} {{ . | urlize | lower }}{{ end }}">
 
-  <header class="post-header">
-    <a href="{{ .Permalink }}" class="post-date u-url"><time class="dt-published" datetime="{{ .Date.Format "02.01.2006 15:04:05 -0700" }}">{{ .Date | time.Format ":date_long" }}</time> ∞</a>
-    {{ if .Title }}
-    <h2 class="p-name">{{ .Title }}</h2>
-    {{ end }}
-  </header>
+<a href="{{ .Permalink }}" class="post-date u-url"><time class="dt-published" datetime="{{ .Date.Format "02.01.2006 15:04:05 -0700" }}">{{ .Date | time.Format ":date_long" }}</time> ∞</a>
+{{ if .Title }}
+<h2 class="p-name">{{ .Title }}</h2>
+{{ end }}
 
-  <article class="post-content e-content">
-    {{ .Content }}
-  </article>
+<article class="post-content e-content">
+  {{ .Content }}
+</article>
 
 </div>
 {{ if or (templates.Exists "partials/reply-by-email.html") (templates.Exists "partials/conversation-link.html") (templates.Exists "partials/plugin_tinylytics.html") (templates.Exists "partials/reply-on-mastodon.html") (templates.Exists "partials/share-on-threads.html")}}
