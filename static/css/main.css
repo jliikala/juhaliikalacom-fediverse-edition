@@ -790,6 +790,12 @@ main .category-list {
   .top-head .inner {
     padding: 3rem 1rem;
   }
+  
+  main > article,
+main > div {
+  background-color: var(--bg-light);
+  padding: 3rem 1rem;
+}
 
   .header-cover {
     height: 200px;
