@@ -557,6 +557,7 @@ time {
 .reply-buttons {
   list-style: none;
   padding: 0;
+  border-top: 1px dashed;
 }
 
 .reply-buttons li {
@@ -632,6 +633,10 @@ time {
 
 .article-meta span {
   text-transform: uppercase;
+}
+
+article p:last-of-type {
+  margin-bottom: 0;
 }
 
 

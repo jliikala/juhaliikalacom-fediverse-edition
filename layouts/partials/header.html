@@ -14,6 +14,7 @@
 			<li><a href="https://micro.blog/juha"><i class="fa-brands fa-microblog"></i><span>Micro.blog</span></a></li>
 		</ul>
 	</div>
+	{{ if .IsHome }}
 	<div class="header-cover"></div>
 	<div class="inner">
 		<a href="/" class="profile-photo-link">
@@ -36,4 +37,5 @@
 			<p>{{ .Site.Data.author.description_alt }}</p>
 		</div>
 	</div>
+	{{ end }}
 </header>
