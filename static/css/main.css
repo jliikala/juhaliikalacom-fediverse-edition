@@ -636,10 +636,6 @@ time {
   text-transform: uppercase;
 }
 
-article p:last-of-type {
-  margin-bottom: 0;
-}
-
 main .category-list {
   list-style: none;
   padding: 0;
