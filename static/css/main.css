@@ -625,6 +625,7 @@ time {
   background: #f0f0f0;
   padding: 3px 10px;
   border-radius: 10px;
+  font-weight: bold;
 }
 
 .read-more {
