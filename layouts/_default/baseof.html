@@ -8,9 +8,9 @@
     {{ partial "header.html" . }}
 
     <div class="page-content {{ .Permalink | relURL | anchorize }}">
-      <div class="main">
+      <main class="main">
         {{ block "main" . }}{{ end }}
-      </div>
+      </main>
       <aside class="side">
         <div class="subscribe-block">
           <h3>Subscribe to latest articles</h3>

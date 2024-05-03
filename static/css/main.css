@@ -308,16 +308,31 @@ main blockquote {
   font-size: 90%;
 }
 
-.page-content .main {
-  font-size: 1.6rem;
+main .post-title a {
+  color: var(--text-color-light);
+}
+
+.main > div, .main article .article-brief, .main ul {
   background-color: var(--bg-light);
+  padding: 3rem;
+}
+
+.page-content main {
+  font-size: 1.6rem;
   color: var(--text-light);
   max-width: 78rem;
-  padding: 3rem;
   align-self: flex-start;
 }
 
-.page-content.fediverse .main, .page-content.subscribe .main, .page-content.photos .main, .page-content.archive .main {
+main .latest-article {
+  margin-bottom: 1rem;
+}
+
+.latest-article figure, .latest-article img {
+  margin-bottom: 0;
+}
+
+.page-content.fediverse main, .page-content.subscribe main, .page-content.photos main, .page-content.archive main {
   max-width: 100%;
   width: 100%;
 }
@@ -598,7 +613,6 @@ time {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 2rem;
   border-bottom: 1px dashed;
   padding-bottom: 2rem;
 }
@@ -610,6 +624,7 @@ time {
 
 .read-more {
   text-align: right;
+  margin-bottom: 0;
 }
 
 .article-meta {
@@ -619,6 +634,7 @@ time {
 .article-meta span {
   text-transform: uppercase;
 }
+
 
 @media (prefers-color-scheme: dark) {
   body {
@@ -674,8 +690,7 @@ time {
     color: var(--text-dark);
   }
 
-  .page-content .main {
-    background-color: var(--bg-dark);
+  .page-content main {
     color: var(--text-dark);
   }
 
@@ -719,11 +734,17 @@ time {
     color: var(--link-color-dark);
   }
 
-  .reply-buttons button {
+  .reply-buttons button, .reply-buttons li a {
     border: 1px solid var(--text-dark);
     color: var(--text-dark);
   }
+  main .post-title a {
+    color: var(--text-color-dark);
+  }
 
+  .main > div, .main article .article-brief, .main ul {
+    background-color: var(--bg-dark);
+  }
 }
 
 @media (max-width: 820px) {
@@ -740,10 +761,6 @@ time {
 
   .page-content {
     gap: 0;
-  }
-
-  .page-content .main {
-    padding: 2rem
   }
 
   .cover {
