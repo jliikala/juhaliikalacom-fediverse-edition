@@ -1,6 +1,6 @@
 {{ define "main" }}
   {{ $posts := where .Site.Pages.ByDate.Reverse "Type" "post" }}
-  {{ $hidden_posts := where $posts "Params.categories" "intersect" (slice "featured") }}
+  {{ $hidden_posts := where $posts "Params.categories" "intersect" (slice "Featured") }}
   {{ $posts = $posts | symdiff $hidden_posts }}
   {{ $paginator := .Paginate ($posts) }}
   {{ $list := $paginator.Pages }}
