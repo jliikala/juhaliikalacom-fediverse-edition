@@ -785,16 +785,6 @@ article p:last-of-type {
     padding: 4rem 2rem;
   }
 
-  .top-head {
-    border-bottom: 1px dashed var(--text-light);
-  }
-
-  @media (prefers-color-scheme:dark) {
-    .top-head {
-      border-bottom: 1px dashed var(--text-dark);
-    }
-  }
-
   .home_posts {
     padding: 1rem;
   }
