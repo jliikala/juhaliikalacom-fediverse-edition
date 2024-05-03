@@ -292,10 +292,6 @@ main blockquote {
   margin: 0;
 }
 
-.fediverse-name a, .e-content a {
-  color: var(--link-color-light);
-}
-
 .page-content {
   display: flex;
   gap: 1rem;
@@ -737,10 +733,6 @@ article p:last-of-type {
 
   .microblog_text a {
     color: var(--accent-blue);
-  }
-
-  .fediverse-name a, .e-content a {
-    color: var(--link-color-dark);
   }
 
   .reply-buttons button, .reply-buttons li a {
