@@ -793,7 +793,6 @@ main .category-list {
   
   main > article,
 main > div {
-  background-color: var(--bg-light);
   padding: 3rem 1rem;
 }
 
