@@ -309,7 +309,8 @@ main .post-title a {
   color: var(--text-color-light);
 }
 
-.main > div, .main article .article-brief, .main ul, .main .post-header {
+main > article,
+main > div {
   background-color: var(--bg-light);
   padding: 3rem;
 }
@@ -743,9 +744,11 @@ main .category-list {
     color: var(--text-color-dark);
   }
 
-  .main > div, .main article .article-brief, .main ul, .main .post-header {
+  main > article,
+  main > div {
     background-color: var(--bg-dark);
   }
+
   .fediverse-address {
     background: #f0f0f0;
     padding: 3px 10px;
