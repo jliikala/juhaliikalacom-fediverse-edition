@@ -839,6 +839,10 @@ article p:last-of-type {
   .social-menu span {
     display: none;
   }
+
+  .from-feed-header {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 520px) {
