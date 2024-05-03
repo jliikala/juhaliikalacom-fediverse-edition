@@ -164,7 +164,6 @@ ul li, ol li {
 }
 
 main a, main a:visited {
-  color: var(--link-color-light);
   font-weight: 600;
 }
 
@@ -642,10 +641,6 @@ time {
     color: var(--text-color-dark);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
-
-  main a, main a:visited {
-    color: var(--link-color-dark);
   }
 
   main h1, main h2, main h3, main strong {
