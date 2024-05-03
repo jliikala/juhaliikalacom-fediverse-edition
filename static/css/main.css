@@ -644,7 +644,7 @@ article p:last-of-type {
   margin-bottom: 0;
 }
 
-.category-list {
+main .category-list {
   list-style: none;
   padding: 0;
 }
