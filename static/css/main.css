@@ -547,7 +547,6 @@ time {
 }
 
 .archive-categories {
-  list-style: none;
   column-count: 3;
   margin: 3rem 0;
 }
@@ -643,6 +642,11 @@ time {
 
 article p:last-of-type {
   margin-bottom: 0;
+}
+
+.category-list {
+  list-style: none;
+  padding: 0;
 }
 
 
@@ -844,6 +848,9 @@ article p:last-of-type {
 
   .social-menu span {
     display: none;
+  }
+  .archive-categories {
+    column-count: 2;
   }
 }
 
