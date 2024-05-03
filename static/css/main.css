@@ -625,6 +625,12 @@ time {
   margin: 0;
 }
 
+.fediverse-address {
+  background: #f0f0f0;
+  padding: 3px 10px;
+  border-radius: 10px;
+}
+
 .read-more {
   text-align: right;
   margin-bottom: 0;
@@ -839,6 +845,12 @@ article p:last-of-type {
 
   .social-menu span {
     display: none;
+  }
+  .fediverse-address {
+    background: #f0f0f0;
+    padding: 3px 10px;
+    border-radius: 10px;
+    color: #3c3c3c;
   }
 }
 
