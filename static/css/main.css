@@ -83,7 +83,7 @@ p, img, figure, ul, ol, dl, li {
   margin-bottom: 1rem;
 }
 
-ul li:last-of-type, ol li:last-of-type {
+ul li:last-of-type, ol li:last-of-type, .description p:last-of-type {
   margin-bottom: 0;
 }
 
@@ -258,6 +258,8 @@ main blockquote {
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
   max-width: 120rem;
   margin: 0 auto;
   margin-top: 5rem;
