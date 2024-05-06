@@ -269,7 +269,6 @@ main blockquote {
 .top-head {
   max-width: 120rem;
   width: 100%;
-  margin-bottom: 1rem;
 }
 
 .header-cover {
@@ -296,6 +295,7 @@ main blockquote {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  margin-top: 1rem;
 }
 .post-tags {
   list-style: none;
@@ -551,6 +551,7 @@ time {
   border-top: 1px dashed;
   background-color: var(--bg-light);
   padding: 3rem;
+  margin-bottom: 0;
 }
 
 .reply-buttons li {
