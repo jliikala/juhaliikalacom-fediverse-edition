@@ -269,7 +269,7 @@ main blockquote {
 .top-head {
   max-width: 120rem;
   width: 100%;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .header-cover {
@@ -379,7 +379,6 @@ main .latest-article {
 .page-header {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1rem;
 }
 
 .page-header img {
@@ -549,8 +548,9 @@ time {
 
 .reply-buttons {
   list-style: none;
-  padding: 0;
   border-top: 1px dashed;
+  background-color: var(--bg-light);
+  padding: 3rem;
 }
 
 .reply-buttons li {
@@ -630,6 +630,7 @@ time {
 
 .article-meta {
   font-size: 1.5rem;
+  margin-top: 3rem;
 }
 
 .article-meta span {
@@ -790,7 +791,7 @@ main .category-list {
   .top-head .inner {
     padding: 3rem 2rem;
   }
-  
+
   main > article,
 main > div {
   padding: 3rem 2rem;
