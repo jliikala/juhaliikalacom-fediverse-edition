@@ -3,14 +3,14 @@
 	<h2 class="post-title">Archive</h2>
 	{{ $list := ($.Site.GetPage "taxonomyTerm" "categories").Pages }}
 	{{ if gt (len $list) 0 }}
-	<div class="archive-categories">
 		<h3>Posts by category</h3>
-		<ul class="category-list">
-			{{ range $list }}
-			<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-			{{ end }}
-		</ul>
-	</div>
+		<div class="archive-categories">
+			<ul class="category-list">
+				{{ range $list }}
+				<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+				{{ end }}
+			</ul>
+		</div>
 	{{ end }}
 	<div class="full-archives h-feed">
 		{{ $list := (where .Site.Pages "Type" "post") }}
