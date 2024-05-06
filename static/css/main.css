@@ -703,7 +703,7 @@ main .category-list {
     color: var(--text-dark);
   }
 
-  .side ul:last-of-type {
+  .side ul:last-of-type, .side p:last-of-type {
     margin-bottom: 0;
   }
 
