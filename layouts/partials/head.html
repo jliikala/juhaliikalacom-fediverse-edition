@@ -16,8 +16,8 @@
   <meta name="twitter:description" content="{{ .Site.Params.itunes_description | truncate 60 }}">
   <meta name="og:description" content="{{ .Site.Params.itunes_description | truncate 60 }}">
   <meta name="description" content="{{ .Site.Params.itunes_description }}">
-  <meta name="twitter:image" content="https://micro.juhaliikala.com/cover.jpg">
-  <meta property="og:image" content="https://micro.juhaliikala.com/cover.jpg">
+  <meta name="twitter:image" content="{{ if and .File (index .Site.Data.covers (.File.BaseFileName)).image }}{{ (index .Site.Data.covers (.File.BaseFileName)).image }}{{ else }}{{ "https://images.unsplash.com/photo-1665149368357-864968813478?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" | relURL }}{{ end }}{{ if not (and .File (index .Site.Data.covers (.File.BaseFileName)).image) }}{{ .Site.Author.avatar }}{{ end }}">
+  <meta property="og:image" content="{{ if and .File (index .Site.Data.covers (.File.BaseFileName)).image }}{{ (index .Site.Data.covers (.File.BaseFileName)).image }}{{ else }}{{ "https://images.unsplash.com/photo-1665149368357-864968813478?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" | relURL }}{{ end }}{{ if not (and .File (index .Site.Data.covers (.File.BaseFileName)).image) }}{{ .Site.Author.avatar }}{{ end }}">
   {{ else }}
   <meta name="twitter:description" content="{{ .Summary | truncate 60 }}">
   <meta name="og:description" content="{{ .Summary | truncate 60 }}">
