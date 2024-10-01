@@ -4,6 +4,10 @@
   <meta name="viewport" content="width=device-width initial-scale=1.0">
   <meta name="twitter:card" content="summary">
   {{ with .Title }}
+    {{ if .File }}
+      {{ $slug := .File.BaseFileName }}
+      {{ $cover := index .Site.Data.covers $slug }}
+    {{ end }}
   <meta name="twitter:title" content="{{ . }}">
   <meta property="og:title" content="{{ . }}">
   <meta name="twitter:image" content="{{ if and .File (index .Site.Data.covers (.File.BaseFileName)).image }}{{ (index .Site.Data.covers (.File.BaseFileName)).image }}{{ else }}{{ "https://images.unsplash.com/photo-1665149368357-864968813478?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" | relURL }}{{ end }}{{ if not (and .File (index .Site.Data.covers (.File.BaseFileName)).image) }}{{ .Site.Author.avatar }}{{ end }}">
