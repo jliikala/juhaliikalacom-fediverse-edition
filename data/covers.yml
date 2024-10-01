@@ -1,0 +1,15 @@
+# These are just examples, use your own post slugs and image paths to apply cover photos to posts.
+# For example, let's say you have a post at this URL: myblog.com/2024/08/25/my-amazing-post.html
+# The slug for that post would be my-amazing-post (without the .html part)
+# for the image part, you can use any URL that has an image you'd like to use,
+# whether it's some local image on your site or perhaps some image from unsplash.com
+# don't forget image attribution if you're using Unsplash images :)
+
+two-blogs-two:
+  image: "https://images.unsplash.com/photo-1506636366880-b083d2cb2f34?q=80&w=1440&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+
+post-slug-2:
+  image: "/images/covers/cover2.jpg"
+
+post-slug-3:
+  image: "/images/covers/cover3.jpg"
