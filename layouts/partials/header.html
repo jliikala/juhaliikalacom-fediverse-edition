@@ -9,9 +9,10 @@
 			</ul>
 		</nav>
 		<ul class="social-menu">
-			<li><a href="{{ .Site.Data.author.threads_url }}"><i class="fa-brands fa-threads"></i><span>Threads</span></a></li>
-			<li><a href="{{ .Site.Data.author.instagram_url }}"><i class="fa-brands fa-instagram"></i><span>Instagram</span></a></li>
-			<li><a href="{{ .Site.Data.author.microblog_url }}"><i class="fa-brands fa-microblog"></i><span>Micro.blog</span></a></li>
+			<li><a href="{{ .Site.Data.author.threads_url }}" rel="me"><i class="fa-brands fa-threads"></i><span>Threads</span></a></li>
+			<li><a href="{{ .Site.Data.author.instagram_url }}" rel="me"><i class="fa-brands fa-instagram"></i><span>Instagram</span></a></li>
+			<li><a href="{{ .Site.Data.author.microblog_url }}" rel="me"><i class="fa-brands fa-microblog"></i><span>Micro.blog</span></a></li>
+			<li><a href="{{ .Site.Data.author.mastodon_url }}" rel="me"><i class="fa-brands fa-mastodon"></i><span>Mastodon</span></a></li>
 		</ul>
 	</div>
 	{{ if .IsHome }}
