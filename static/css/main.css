@@ -726,6 +726,10 @@ main .category-list {
     color: var(--accent-blue);
   }
 
+  .reply-buttons {
+    background-color: var(--bg-dark);
+  }
+
   .microblog_conversation {
     border-top: 1px dashed var(--bg-light);
   }
