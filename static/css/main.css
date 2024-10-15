@@ -560,7 +560,7 @@ time {
   flex-wrap: wrap;
 }
 
-.reply-buttons button, .reply-buttons a {
+.reply-buttons button, .reply-buttons a, .microblog_reply_button input {
   vertical-align: baseline;
   padding: 5px 10px;
   font-size: 0.9em;
@@ -744,7 +744,7 @@ main .category-list {
     color: var(--accent-blue);
   }
 
-  .reply-buttons button, .reply-buttons li a {
+  .reply-buttons button, .reply-buttons li a, .microblog_reply_button input {
     border: 1px solid var(--text-dark);
     color: var(--text-dark);
   }
