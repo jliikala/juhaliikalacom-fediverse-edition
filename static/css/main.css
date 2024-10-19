@@ -412,9 +412,9 @@ main .latest-article {
 
 .itsme {
   position: absolute;
-  top: -10px;
-  left: 165px;
-  height: 1.8rem;
+  top: 7rem;
+  left: 7rem;
+  height: 2.8rem;
 }
 
 .page-header .site-title {
@@ -803,10 +803,9 @@ main .category-list {
     padding: 3rem 2rem;
   }
 
-  main > article,
-main > div {
-  padding: 3rem 2rem;
-}
+  main > article, main > div {
+    padding: 3rem 2rem;
+  }
 
   .header-cover {
     height: 200px;
@@ -858,6 +857,13 @@ main > div {
   }
   .archive-categories {
     column-count: 2;
+  }
+
+  .itsme {
+    position: absolute;
+    top: 5rem;
+    left: 6rem;
+    height: 2.4rem;
   }
 }
 
