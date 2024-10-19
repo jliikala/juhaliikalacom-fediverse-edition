@@ -1,6 +1,7 @@
 {
 	"paginate": 20,
   "params": {
-    "dateForm": "02.01.2006"
+    "dateForm": "02.01.2006",
+    "reply_on_mastodon_text": "Reply on Mastodon"
   }
 }
