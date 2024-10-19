@@ -28,8 +28,6 @@
   {{ if templates.Exists "partials/share-on-threads.html" }}
   <li>{{ partial "share-on-threads.html" . }}</li>
   {{ end }}
-
-  <pre>{{ $.Params.threads }}</pre>
 {{ end }}
 </ul>
 {{ if .Params.bluesky }}
