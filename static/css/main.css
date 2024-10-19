@@ -493,6 +493,7 @@ time {
 .subscribe-form {
   display: flex;
   flex-wrap: wrap;
+  max-width: 500px;
 }
 
 .subscribe-form label {
