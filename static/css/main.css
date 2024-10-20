@@ -393,6 +393,16 @@ main .latest-article {
 	top: -50px;
 }
 
+.site-header .header-subscribe-btn {
+  right: 30px;
+  top: -18px;
+  background: var(--accent-blue);
+  color: #fff;
+  border-radius: 5px;
+  padding: 3px 15px;
+  display: block;
+}
+
 .post_list .h-entry {
   margin-bottom: 3rem;
   border-bottom: 1px dashed var(--text-light);
@@ -835,15 +845,6 @@ main .category-list {
     font-size: 95%;
   }
 
-  .site-header .header-subscribe-btn {
-    right: 30px;
-    top: -18px;
-    background: var(--accent-blue);
-    color: #fff;
-    border-radius: 5px;
-    padding: 3px 15px;
-    display: block;
-  }
   .top-nav {
     padding: 10px 10px;
     font-size: 90%;
