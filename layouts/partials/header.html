@@ -5,10 +5,11 @@
 				<li><a href="/"><i class="fa-solid fa-house"></i></a></li>
 				<li><a href="{{ "about" | absURL }}">About</a></li>
 				<li><a href="{{ "archive" | absURL }}">Archive</a></li>
-				<li><a href="{{ "feeds.xml" | absURL }}">RSS</a></li>
+				<li><a href="{{ "subscribe" | absURL }}">Subscribe via email</a></li>
 			</ul>
 		</nav>
 		<ul class="social-menu">
+			<li><a href="{{ "feeds.xml" | absURL }}"><i class="fa-solid fa-rss"></i><span>RSS</span></a></li>
 			<li><a href="{{ .Site.Data.author.threads_url }}" rel="me"><i class="fa-brands fa-threads"></i><span>Threads</span></a></li>
 			<li><a href="{{ .Site.Data.author.instagram_url }}" rel="me"><i class="fa-brands fa-instagram"></i><span>Instagram</span></a></li>
 			<li><a href="{{ .Site.Data.author.microblog_url }}" rel="me"><i class="fa-brands fa-microblog"></i><span>Micro.blog</span></a></li>
