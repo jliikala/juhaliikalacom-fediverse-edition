@@ -403,6 +403,10 @@ main .latest-article {
   display: block;
 }
 
+.header-subscribe-btn span {
+  margin-left: 1rem;
+}
+
 .post_list .h-entry {
   margin-bottom: 3rem;
   border-bottom: 1px dashed var(--text-light);
