@@ -393,10 +393,6 @@ main .latest-article {
 	top: -50px;
 }
 
-.site-header .header-subscribe-btn {
-  display: none;
-}
-
 .post_list .h-entry {
   margin-bottom: 3rem;
   border-bottom: 1px dashed var(--text-light);
