@@ -696,6 +696,7 @@ main .category-list {
 
   main blockquote {
     border-left: 5px solid var(--link-color-dark);
+    margin-bottom: 1.3rem;
   }
 
   .wrapper .inner, .home_columns .home_posts, .top-head .inner {
