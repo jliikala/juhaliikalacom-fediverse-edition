@@ -17,8 +17,8 @@
   <meta name="twitter:description" content="{{ .Site.Params.itunes_description | truncate 60 }}">
   <meta name="og:description" content="{{ .Site.Params.itunes_description | truncate 60 }}">
   <meta name="description" content="{{ .Site.Params.itunes_description }}">
-  <meta name="twitter:image" content="https://micro.juhaliikala.com/cover.jpg">
-  <meta property="og:image" content="https://micro.juhaliikala.com/cover.jpg">
+  <meta name="twitter:image" content="https://www.juhaliikala.com/cover.jpg">
+  <meta property="og:image" content="https://www.juhaliikala.com/cover.jpg">
   {{ else }}
   <meta name="twitter:description" content="{{ .Summary | truncate 60 }}">
   <meta name="og:description" content="{{ .Summary | truncate 60 }}">
@@ -30,8 +30,8 @@
   <meta property="og:image" content="{{ $cover.image }}">
   {{ else }}
     <!-- Fallback to a default image if no cover is found for the current slug -->
-    <meta name="twitter:image" content="https://micro.juhaliikala.com/cover.jpg">
-    <meta property="og:image" content="https://micro.juhaliikala.com/cover.jpg">
+    <meta name="twitter:image" content="https://www.juhaliikala.com/cover.jpg">
+    <meta property="og:image" content="https://www.juhaliikala.com/cover.jpg">
   {{ end }}
   {{ range .Params.photos }}
   <meta name="twitter:image" content="{{ . }}">
