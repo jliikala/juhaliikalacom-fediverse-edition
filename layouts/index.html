@@ -1,59 +1,65 @@
 {{ define "main" }}
   {{ $posts := where .Site.Pages.ByDate.Reverse "Type" "post" }}
-  {{ $hidden_posts := where $posts "Params.categories" "intersect" (slice "Featured") }}
-  {{ $posts = $posts | symdiff $hidden_posts }}
-  {{ $paginator := .Paginate ($posts) }}
+  {{ $hiddenPosts := where $posts "Params.categories" "intersect" (slice "Featured") }}
+  {{ $visiblePosts := $posts | symdiff $hiddenPosts }}
+  {{ $paginator := .Paginate $visiblePosts }}
   {{ $list := $paginator.Pages }}
-  {{ if .Site.Taxonomies.categories.featured }}
+
+  {{ if .Site.Taxonomies.categories.featured }} <!-- Check for featured taxonomy -->
     {{ range first 1 .Site.Taxonomies.categories.featured }}
       {{ partial "latest-home-post.html" . }}
     {{ end }}
   {{ end }}
-      <div class="from-feed-header">
-        <h3>From the feed</h3>
-        <span class="fediverse-name">Follow via <a href="https://micro.juhaliikala.com/feed.xml">RSS feed</a> or on Fediverse <a href="https://micro.juhaliikala.com/fediverse" class="fediverse-address">@juha@juhaliikala.com</a></span>
-      </div>
-      <div class="posts h-feed">
-        <div class="post_list" role="main">
-          {{ range $list  }}
-            {{ if not (in .Params.categories "featured") }}
-            <div class="post-preview h-entry {{ range .Params.categories }} {{ . | urlize | lower }}{{ end }}">
-              <a href="{{ .Permalink }}" class="post-date u-url"><time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05 -0700" }}">{{ .Date.Format "Jan 2, 2006" }}</time> ∞</a>
-              {{ if .Title }}
-                <h2 class="post-title p-name"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-                  {{ if in .RawContent "<!--more-->" }}
-                  <div class="p-summary">
-                    {{ $splitContents := split .RawContent "<!--more-->" }}
-                    {{ index $splitContents 0 | markdownify }}
-                    <p><a class="read-more" href="{{ .Permalink }}">Read More →</a></p>
-                  </div>
-                  {{ else }}
-                  <div class="e-content">
-                    {{ .Content }}
-                  </div>
-                  {{ end }}
-              {{ else }}
-                <div class="e-content">
-                  {{ .Content }}
-                </div>
-              {{ end }}
-            </div>
+
+  <div class="from-feed-header">
+    <h3>From the feed</h3>
+    <span class="fediverse-name">Follow via <a href="https://micro.juhaliikala.com/feed.xml">RSS feed</a> or on Fediverse <a href="https://micro.juhaliikala.com/fediverse" class="fediverse-address">@juha@juhaliikala.com</a></span>
+  </div>
+
+  <div class="posts h-feed">
+    <div class="post_list" role="main">
+      {{ range $list }}
+        {{ if not (in .Params.categories "featured") }} <!-- Ensure not showing featured posts -->
+        <div class="post-preview h-entry {{ range .Params.categories }} {{ . | urlize | lower }}{{ end }}">
+          <a href="{{ .Permalink }}" class="post-date u-url">
+            <time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05 -0700" }}">{{ .Date.Format "Jan 2, 2006" }}</time> ∞
+          </a>
+          {{ if .Title }}
+            <h2 class="post-title p-name"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+            {{ if in .RawContent "<!--more-->" }}
+              <div class="p-summary">
+                {{ $splitContents := split .RawContent "<!--more-->" }}
+                {{ index $splitContents 0 | markdownify }}
+                <p><a class="read-more" href="{{ .Permalink }}">Read More →</a></p>
+              </div>
+            {{ else }}
+              <div class="e-content">
+                {{ .Content }}
+              </div>
             {{ end }}
+          {{ else }}
+            <div class="e-content">
+              {{ .Content }}
+            </div>
           {{ end }}
         </div>
-      </div>
-      {{ if gt (len $paginator.Pages) 0 }}
-      <div class="post-nav">
-        {{ if $paginator.HasPrev }}
-        <span class="prev">
-          <a href="{{ $paginator.Prev.URL }}" title="Previous Page"><span class="arrow">← Newer Posts</span></a>
-        </span>
-        {{ end }}
-        {{ if $paginator.HasNext }}
-        <span class="next">
-          <a href="{{ $paginator.Next.URL }}"><span class="arrow">Older Posts →</span></a>
-        </span>
-        {{ end }}
-      </div>
+        {{ end }} <!-- End of featured check -->
       {{ end }}
-      {{ end }}
+    </div> <!-- End of post_list -->
+  </div> <!-- End of posts -->
+
+  {{ if gt (len $paginator.Pages) 0 }}
+  <div class="post-nav">
+    {{ if $paginator.HasPrev }}
+    <span class="prev">
+      <a href="{{ $paginator.Prev.URL }}" title="Previous Page"><span class="arrow">← Newer Posts</span></a>
+    </span>
+    {{ end }}
+    {{ if $paginator.HasNext }}
+    <span class="next">
+      <a href="{{ $paginator.Next.URL }}"><span class="arrow">Older Posts →</span></a>
+    </span>
+    {{ end }}
+  </div>
+  {{ end }}
+{{ end }}

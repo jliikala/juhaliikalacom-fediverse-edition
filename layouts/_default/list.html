@@ -3,23 +3,25 @@
   <h2 class="p-name">{{ .Title }}</h2>
   <div class="post_list" role="main">
     {{ $paginator := .Paginate (where .Pages.ByDate.Reverse "Type" "post") }}
-    {{ range .Paginator.Pages }}
+    {{ range $paginator.Pages }}
       <div class="post-preview h-entry {{ range .Params.categories }} {{ . | urlize | lower }}{{ end }}">
-        <a href="{{ .Permalink }}" class="post-date u-url"><time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05 -0700" }}">{{ .Date.Format "Jan 2, 2006" }}</time> ∞</a>
+        <a href="{{ .Permalink }}" class="post-date u-url">
+          <time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05 -0700" }}">{{ .Date.Format "Jan 2, 2006" }}</time> ∞
+        </a>
         {{ if .Title }}
-        <h2 class="post-title p-name"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+          <h2 class="post-title p-name"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
           {{ if in .RawContent "<!--more-->" }}
-          <div class="p-summary">
-            {{ $splitContents := split .RawContent "<!--more-->" }}
-            {{ index $splitContents 0 | markdownify }}
-            <p><a class="read-more" href="{{ .Permalink }}">
-              Read More →
-            </a></p>
-          </div>
+            <div class="p-summary">
+              {{ $splitContents := split .RawContent "<!--more-->" }}
+              {{ index $splitContents 0 | markdownify }}
+              <p><a class="read-more" href="{{ .Permalink }}">
+                Read More →
+              </a></p>
+            </div>
           {{ else }}
-          <div class="e-content">
-            {{ .Content }}
-          </div>
+            <div class="e-content">
+              {{ .Content }}
+            </div>
           {{ end }}
         {{ else }}
           <div class="e-content">
@@ -28,11 +30,11 @@
         {{ end }}
       </div>
     {{ end }}
-</div>
-</div>
+  </div> <!-- Close post_list -->
+</div> <!-- Close archive -->
+
 {{ if gt (len $paginator.Pages) 0 }}
 <div class="post-nav">
-  oho
   {{ if $paginator.HasPrev }}
   <span class="prev">
     <a href="{{ $paginator.Prev.URL }}" title="Previous Page"><span class="arrow">← Newer Posts</span></a>
