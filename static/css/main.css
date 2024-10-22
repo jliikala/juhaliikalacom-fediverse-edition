@@ -262,6 +262,7 @@ main blockquote {
   display: flex;
   flex-direction: column;
   max-width: 120rem;
+  width:100%;
   margin: 0 auto;
   margin-top: 5rem;
   margin-bottom: 5rem;
@@ -278,6 +279,7 @@ main blockquote {
   height: 300px;
   background-size: cover;
   width: 100%;
+  max-width:100%;
 }
 
 .title-fediverse-handle {
@@ -374,6 +376,7 @@ main .latest-article {
   color: var(--text-light);
   margin: 0 auto;
   max-width: 80rem;
+  width: 100%;
   padding: 5rem;
 }
 
@@ -800,6 +803,7 @@ main .category-list {
 
   .wrapper {
     width: 100%;
+    max-width: 100%;
     height: auto;
     min-height: auto;
   }
@@ -845,7 +849,7 @@ main .category-list {
 
   .home_blogroll { display: none; padding: 0;}
 
-  .home_posts { flex: auto; width: 100%; padding: 0; }
+  .home_posts { flex: auto; width: 100%; max-width: 100%;padding: 0; }
 
   .description {
     font-size: 95%;
