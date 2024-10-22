@@ -1,10 +1,11 @@
 {{ define "main" }}
 {{ $slug := .File.BaseFileName }} <!-- Get the current page slug -->
 {{ $cover := index .Site.Data.covers $slug }} <!-- Lookup the cover in covers.yml -->
-{{ $defaultImage := "https://images.unsplash.com/photo-1466515562424-5c0e569369d8?q=80&w=2621&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" | relURL }}
+{{ if $cover.image }} <!-- Check if the cover image is defined -->
 <figure class="article-cover">
-  <img src="{{ if $cover.image }}{{ $cover.image }}{{ else }}{{ $defaultImage }}{{ end }}" alt="Cover Image for {{ .Title }}" />
+  <img src="{{ $cover.image }}" alt="Cover Image for {{ .Title }}" />
 </figure>
+{{ end }}
 <div id="post-content" class="post h-entry {{ range .Params.categories }} {{ . | urlize | lower }}{{ end }}">
 
 <a href="{{ .Permalink }}" class="post-date u-url"><time class="dt-published" datetime="{{ .Date.Format "02.01.2006 15:04:05 -0700" }}">{{ .Date | time.Format ":date_long" }}</time> ∞</a>
