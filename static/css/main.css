@@ -678,6 +678,11 @@ main .category-list {
   max-width: 700px;
 }
 
+.post-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
 @media (prefers-color-scheme: dark) {
   body {
     background-color: var(--bg-dark);
