@@ -321,6 +321,7 @@ main > div {
   font-size: 1.6rem;
   color: var(--text-light);
   max-width: 78rem;
+  width: 100%;
   align-self: flex-start;
 }
 
@@ -361,6 +362,7 @@ main .latest-article {
   color: var(--text-light);
   align-self: flex-start;
   max-width: 41rem;
+  width: 100%;
 }
 
 .side .subscribe-block {
@@ -670,6 +672,10 @@ main .category-list {
 
 .microblog_reply_form {
   margin-top: 5rem;
+}
+
+.page-content.subscribe {
+  max-width: 700px;
 }
 
 @media (prefers-color-scheme: dark) {
