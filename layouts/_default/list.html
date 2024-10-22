@@ -30,6 +30,7 @@
     {{ end }}
 </div>
 </div>
+{{ if gt (len $paginator.Pages) 0 }}
 <div class="post-nav">
   {{ if $paginator.HasPrev }}
   <span class="prev">
@@ -42,4 +43,5 @@
   </span>
   {{ end }}
 </div>
+{{ end }}
 {{ end }}
