@@ -180,7 +180,6 @@ main blockquote {
 
 .microblog_conversation {
   margin-top: 4rem;
-  border-top: 1px dashed var(--bg-dark);
   padding-top: 4rem;
 }
 
@@ -615,6 +614,10 @@ time {
   margin-bottom: 0;
 }
 
+.main-menu li, .social-menu li {
+  margin-bottom: 0;
+}
+
 .social-menu span {
   margin-left: 1rem;
 }
@@ -665,6 +668,9 @@ main .category-list {
   gap: 5px;
 }
 
+.microblog_reply_form {
+  margin-top: 5rem;
+}
 
 @media (prefers-color-scheme: dark) {
   body {
@@ -750,10 +756,6 @@ main .category-list {
 
   .reply-buttons {
     background-color: var(--bg-dark);
-  }
-
-  .microblog_conversation {
-    border-top: 1px dashed var(--bg-light);
   }
 
   .microblog_text a {
