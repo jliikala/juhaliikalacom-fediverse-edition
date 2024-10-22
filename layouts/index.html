@@ -48,18 +48,18 @@
     </div> <!-- End of post_list -->
   </div> <!-- End of posts -->
 
-  {{ if gt (len $paginator.Pages) 0 }}
+  {{ if and (gt (len $paginator.Pages) 0) (gt $paginator.TotalPages 1) }}
   <div class="post-nav">
-    {{ if $paginator.HasPrev }}
-    <span class="prev">
-      <a href="{{ $paginator.Prev.URL }}" title="Previous Page"><span class="arrow">← Newer Posts</span></a>
-    </span>
-    {{ end }}
-    {{ if $paginator.HasNext }}
-    <span class="next">
-      <a href="{{ $paginator.Next.URL }}"><span class="arrow">Older Posts →</span></a>
-    </span>
-    {{ end }}
-  </div>
+  {{ if $paginator.HasPrev }}
+  <span class="prev">
+    <a href="{{ $paginator.Prev.URL }}" title="Previous Page"><span class="arrow">← Newer Posts</span></a>
+  </span>
   {{ end }}
+  {{ if $paginator.HasNext }}
+  <span class="next">
+    <a href="{{ $paginator.Next.URL }}"><span class="arrow">Older Posts →</span></a>
+  </span>
+  {{ end }}
+</div>
+{{ end }}
 {{ end }}

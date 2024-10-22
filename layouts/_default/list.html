@@ -33,8 +33,7 @@
   </div> <!-- Close post_list -->
 </div> <!-- Close archive -->
 
-{{ if gt (len $paginator.Pages) 0 }}
-huh
+{{ if and (gt (len $paginator.Pages) 0) (gt $paginator.TotalPages 1) }}
 <div class="post-nav">
   {{ if $paginator.HasPrev }}
   <span class="prev">
