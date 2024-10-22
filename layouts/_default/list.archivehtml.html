@@ -1,13 +1,18 @@
 {{ define "main" }}
 <div class="archive h-feed">
 	<h2 class="post-title">Archive</h2>
+	{{ with ($.Site.GetPage "taxonomyTerm" "categories").Pages }}
 	{{ $list := ($.Site.GetPage "taxonomyTerm" "categories").Pages }}
 	{{ if gt (len $list) 0 }}
 		<h3>Posts by category</h3>
 		<div class="archive-categories">
 			<ul class="category-list">
-				{{ range $list }}
-				<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+				{{ range . }}
+					{{ $categoryName := .Title }}
+					{{ $postCount := len (where $.Site.RegularPages "Params.categories" "intersect" (slice $categoryName)) }}
+					{{ if gt $postCount 0 }}
+					<li><a href="{{ .Permalink }}">{{ .Title }} ({{ $postCount }})</a></li>
+					{{ end }}
 				{{ end }}
 			</ul>
 		</div>
