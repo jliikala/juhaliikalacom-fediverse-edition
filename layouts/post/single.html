@@ -18,18 +18,6 @@
 </article>
 
 </div>
-<pre>
-{{ .Params.mastodon.id }}<br>
-{{ .Params.mastodon.username }}<br>
-{{ .Params.mastodon.hostname }}<br>
-<br><br><br>
-{{ .Params.bluesky.id }}<br>
-{{ .Params.bluesky.url }}<br>
-{{ .Params.bluesky.link }}<br>
-{{ .Params.bluesky.handle }}<br>
-{{ .Params.bluesky.hostname }}<br>
-{{ .Params.bluesky.did }}
-</pre>
 {{ if or (templates.Exists "partials/conversation-link.html") (templates.Exists "partials/plugin_tinylytics.html") (templates.Exists "partials/reply-on-threads.html") (templates.Exists "partials/reply-on-mastodon.html") (templates.Exists "partials/reply-on-bluesky.html")}}
 <ul class="reply-buttons">
   {{ if templates.Exists "partials/plugin_tinylytics.html" }}<li><button class="tinylytics_kudos">Kudos</button></li>{{ end }}
