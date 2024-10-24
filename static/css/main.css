@@ -79,7 +79,7 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
-p, img, figure, ul, ol, dl, li {
+p, img, figure, ul, ol, dl {
   margin-bottom: 1rem;
 }
 
@@ -157,10 +157,6 @@ h1 a, h2 a, h3 a {
 ul, ol {
   list-style-position: inside;
   margin-bottom: 2rem;
-}
-
-ul li, ol li {
-  margin-bottom: 0.5rem;
 }
 
 main a, main a:visited {
