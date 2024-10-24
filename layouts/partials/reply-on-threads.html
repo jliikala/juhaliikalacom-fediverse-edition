@@ -1,1 +1,1 @@
-<a href="{{ .Params.threads.url }}"><i class="fa-brands fa-threads"></i> Reply on Threads</a>
+{{ if .Params.threads.url }}<a href="{{ .Params.threads.url }}"><i class="fa-brands fa-threads"></i> Reply on Threads</a>{{ end }}
