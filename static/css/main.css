@@ -569,12 +569,20 @@ time {
   background-color: var(--bg-light);
   padding: 3rem;
   margin-bottom: 0;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .reply-buttons li {
   display: inline-flex;
   white-space: nowrap;
   flex-wrap: wrap;
+}
+
+.reply-buttons .reply-on {
+  margin-left: auto;
 }
 
 .reply-buttons button, .reply-buttons a, .microblog_reply_button input {
@@ -763,10 +771,6 @@ main .category-list {
 
   .reply-buttons {
     background-color: var(--bg-dark);
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    align-items: center;
   }
 
   .microblog_text a {
@@ -776,10 +780,6 @@ main .category-list {
   .reply-buttons button, .reply-buttons li a, .microblog_reply_button input {
     border: 1px solid var(--text-dark);
     color: var(--text-dark);
-  }
-
-  .reply-buttons .reply-on {
-    margin-left: auto;
   }
 
   main .post-title a {
