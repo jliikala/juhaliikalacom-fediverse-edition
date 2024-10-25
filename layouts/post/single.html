@@ -23,9 +23,9 @@
   {{ if templates.Exists "partials/plugin_tinylytics.html" }}<li><button class="tinylytics_kudos">Kudos</button></li>{{ end }}
   <li class="reply-on">Reply on: </li>
   {{ if templates.Exists "partials/conversation-link.html" }}<li>{{ partial "conversation-link.html" . }}</li>{{ end }}
-  {{ if templates.Exists "partials/reply-on-threads.html" }}<li>{{ partial "reply-on-threads.html" . }}</li>{{ end }}
-  {{ if templates.Exists "partials/reply-on-bluesky.html" }}<li>{{ partial "reply-on-bluesky.html" . }}</li>{{ end }}
-  {{ if templates.Exists "partials/reply-on-mastodon.html" }}<li>{{ partial "reply-on-mastodon.html" . }}</li>{{ end }}
+  {{ if templates.Exists "partials/reply-on-threads.html" }}{{ partial "reply-on-threads.html" . }}{{ end }}
+  {{ if templates.Exists "partials/reply-on-bluesky.html" }}{{ partial "reply-on-bluesky.html" . }}{{ end }}
+  {{ if templates.Exists "partials/reply-on-mastodon.html" }}{{ partial "reply-on-mastodon.html" . }}{{ end }}
 {{ end }}
 </ul>
 {{ if .Params.bluesky }}
