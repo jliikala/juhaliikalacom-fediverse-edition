@@ -12,9 +12,15 @@
         {{ block "main" . }}{{ end }}
       </main>
       <aside class="side">
-        <div class="from-feed-header">
-          <h3>From the feed</h3>
-          <span class="fediverse-name">Follow via <a href="https://www.juhaliikala.com/feed.xml">RSS feed</a> or on Fediverse <a href="https://www.juhaliikala.com/fediverse" class="fediverse-address">@juha@juhaliikala.com</a></span>
+        <div class="aside-subscribe">
+          <h2 class="p-name">Get weekly blog updates</h2>
+          <p>Stay up to date with my weekly newsletter! Every Saturday, you’ll receive a wrap-up of everything that happened on the blog throughout the week.</p>
+          <form class="subscribe-form" method="POST" action="https://micro.blog/users/subscribe/65934">
+            <input type="email" name="email" size="30" placeholder="Your email address">
+            <input type="submit" value="Subscribe">
+          </form>
+          <p>Thank you for subscribing! 😊</p>
+          <small><span class="fediverse-name">Or, follow via <a href="https://www.juhaliikala.com/feed.xml">RSS feed</a> or on Fediverse <a href="https://www.juhaliikala.com/fediverse" class="fediverse-address">@juha@juhaliikala.com</a></span></small>
         </div>
         <div class="posts h-feed">
           <div class="post_list" role="main">
