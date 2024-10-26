@@ -806,7 +806,7 @@ aside > div {
 }
 
 @media (max-width: 1199px) {
-  .page-content main, .page-content aside {
+  .page-content main, .page-content .side {
     max-width: 100%;
   }
 }
