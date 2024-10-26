@@ -19,7 +19,7 @@
   <div class="posts h-feed">
     <div class="post_list" role="main">
       {{ range $list }}
-        {{ if and (in .Params.categories "article") (not (in .Params.categories "featured")) }} <!-- Ensure not showing featured posts and only showing posts in article category -->
+        {{ if and (in .Params.categories "Article") (not (in .Params.categories "Featured")) }} <!-- Ensure not showing featured posts and only showing posts in article category -->
         <div class="post-preview h-entry {{ range .Params.categories }} {{ . | urlize | lower }}{{ end }}">
           <a href="{{ .Permalink }}" class="post-date u-url">
             <time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05 -0700" }}">{{ .Date.Format "Jan 2, 2006" }}</time> ∞
@@ -43,7 +43,7 @@
             </div>
           {{ end }}
         </div>
-        {{ end }} <!-- End of featured check -->
+        {{ end }} <!-- End of category checks -->
       {{ end }}
     </div> <!-- End of post_list -->
   </div> <!-- End of posts -->
