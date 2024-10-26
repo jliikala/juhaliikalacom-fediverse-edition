@@ -897,6 +897,9 @@ aside > div {
     left: 6rem;
     height: 2.4rem;
   }
+  .page-content .side {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 520px) {
@@ -905,9 +908,6 @@ aside > div {
   }
   .navthree {
     flex-direction: column;
-  }
-  .page-content .side {
-    max-width: 100%;
   }
 }
 
