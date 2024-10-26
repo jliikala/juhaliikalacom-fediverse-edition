@@ -751,7 +751,7 @@ aside > div {
     color: var(--text-dark);
   }
 
-  .page-content .side, aside > div {
+  .page-content .side, aside > div, .site-footer {
     background: var(--bg-dark-opaq);
     color: var(--text-dark);
   }
@@ -802,6 +802,12 @@ aside > div {
     padding: 3px 10px;
     border-radius: 10px;
     color: #3c3c3c !important;
+  }
+}
+
+@media (max-width: 1199px) {
+  .page-content main, .page-content aside {
+    max-width: 100%;
   }
 }
 
