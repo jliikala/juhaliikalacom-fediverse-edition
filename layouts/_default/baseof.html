@@ -19,7 +19,7 @@
         <div class="posts h-feed">
           <div class="post_list" role="main">
             {{ $posts := where .Site.Pages.ByDate.Reverse "Type" "post" }}
-            {{ $filteredPosts := where $posts "Params.categories" "not in" (slice "Featured" "Article") }}
+            {{ $filteredPosts := where $posts ".Params.categories" "!=" "Featured" | where ".Params.categories" "!=" "Article" }}
             {{ $limitedPosts := first 20 $filteredPosts }}
 
             {{ range $limitedPosts }}
