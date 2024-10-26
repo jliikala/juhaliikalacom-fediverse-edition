@@ -19,9 +19,13 @@
         <div class="posts h-feed">
           <div class="post_list" role="main">
             {{ $posts := where .Site.Pages.ByDate.Reverse "Type" "post" }}
-            {{ $filteredPosts := where $posts ".Params.categories" "!=" "Featured" | where ".Params.categories" "!=" "Article" }}
+            {{ $filteredPosts := slice }}
+            {{ range $posts }}
+              {{ if and (not (in .Params.categories "Featured")) (not (in .Params.categories "Article")) }}
+                {{ $filteredPosts = $filteredPosts | append . }}
+              {{ end }}
+            {{ end }}
             {{ $limitedPosts := first 20 $filteredPosts }}
-
             {{ range $limitedPosts }}
               <div class="post-preview h-entry {{ range .Params.categories }} {{ . | urlize | lower }}{{ end }}">
                 <a href="{{ .Permalink }}" class="post-date u-url">
@@ -48,7 +52,6 @@
               </div>
             {{ end }}
           </div> <!-- End of post_list -->
-
           {{ if gt (len $filteredPosts) 20 }}
             <div class="archive-link">
               <a href="/archive">More in the archives →</a>
