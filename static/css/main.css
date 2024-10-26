@@ -906,6 +906,9 @@ aside > div {
   .page-content .side {
     max-width: 100%;
   }
+  footer .blogroll {
+    column-count: 2;
+  }
 }
 
 @media (max-width: 520px) {
