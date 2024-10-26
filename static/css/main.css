@@ -448,8 +448,9 @@ main .latest-article {
   margin-top: 3rem;
   font-family: var(--font-stack-mono);
   font-size: 1.6rem;
-  border-top: 5px dotted #eee;
-  padding-top: 30px;
+  padding: 3rem 2rem;
+  background: var(--bg-light-opaq);
+  color: var(--text-light);
 }
 
 .site-footer .navthree {
