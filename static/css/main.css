@@ -690,7 +690,7 @@ footer .blogroll {
   margin: 3rem 0;
 }
 
-aside div {
+aside > div {
   margin-bottom: 1rem;
   padding: 3rem 2rem;
   background: var(--bg-light-opaq);
