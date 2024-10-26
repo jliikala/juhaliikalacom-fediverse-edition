@@ -751,7 +751,7 @@ aside > div {
     color: var(--text-dark);
   }
 
-  .page-content .side {
+  .page-content .side, aside > div {
     background: var(--bg-dark-opaq);
     color: var(--text-dark);
   }
@@ -900,8 +900,14 @@ aside > div {
 }
 
 @media (max-width: 520px) {
+  footer .blogroll {
+    column-count: 1;
+  }
   .navthree {
     flex-direction: column;
+  }
+  .page-content .side {
+    max-width: 100%;
   }
 }
 
