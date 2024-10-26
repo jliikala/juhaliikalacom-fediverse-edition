@@ -25,7 +25,7 @@
                 {{ $filteredPosts = $filteredPosts | append . }}
               {{ end }}
             {{ end }}
-            {{ $limitedPosts := first 20 $filteredPosts }}
+            {{ $limitedPosts := first 10 $filteredPosts }}
             {{ range $limitedPosts }}
               <div class="post-preview h-entry {{ range .Params.categories }} {{ . | urlize | lower }}{{ end }}">
                 <a href="{{ .Permalink }}" class="post-date u-url">
